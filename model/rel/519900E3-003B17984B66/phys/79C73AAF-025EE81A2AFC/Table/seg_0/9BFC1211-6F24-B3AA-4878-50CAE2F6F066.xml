@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="INFORMATION" directorySegmentName="seg_0" id="9BFC1211-6F24-B3AA-4878-50CAE2F6F066">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:29:53 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B1E8D2BA-3D82-6A38-DFAE-E250D09A0EB4</segment>
+<tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_DB" id="00D7B011-E987-196F-7EA0-8A3C904A3021">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STORAGE_TEMP" id="2F6602DF-6183-D537-7FCD-7BE46A6291B9">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_INFORMATION" id="3880EEBE-C9E7-AAD3-3C5D-96FD40E9FA19">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CACHE_SIZE_MEM" id="6E635004-76D1-DFE0-8BF4-8E34B2D04DD9">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FREE_MEM" id="7A890653-B12A-8C37-7DDA-2946D4BB75F1">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TIMESTAMP" id="A6D08E54-8FBB-CD88-86D4-5C3419953557">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STORAGE_DATA" id="A731C2DE-AA3A-1D5F-6214-15E03A43188E">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MAX_SIZE_MEM" id="EE115B17-7150-A095-1E41-4BF83C46F6D9">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="INFORMATION_PK" id="F2454BD2-3C05-12CE-8C48-5D48A5418CD2">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:09 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
+<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ID_DBI_FK" id="9DFB77CF-D4DD-B8EE-3096-45DB381C0B0E">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="INFORMATION_PK" id="1B7B5C15-C656-2CF1-6E86-7950B8155FC9">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:11 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
+<existingIndex>F2454BD2-3C05-12CE-8C48-5D48A5418CD2</existingIndex>
+<indexSegment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

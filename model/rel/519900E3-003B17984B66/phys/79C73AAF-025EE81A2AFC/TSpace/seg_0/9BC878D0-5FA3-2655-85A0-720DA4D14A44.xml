@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="TP_TABLES" directorySegmentName="seg_0" id="9BC878D0-5FA3-2655-85A0-720DA4D14A44">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>TP_TABLES</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:29:41 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+</TableSpaceOraclev10g>

@@ -1,0 +1,206 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="99A7613E-2EED-A794-4E95-B8C263CC35D4" schemaObject="F9B8BFA2-11A1-83BB-A818-91D5CC544522" name="USERS">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>USERS</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:05 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_USER" id="E4A924D9-80DD-CDC4-B04C-7D900799524B">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>ID_USER</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERNAME" id="660CC81B-F201-3CCB-5F3A-41326317A523">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USERNAME</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<ownDataTypeParameters>45 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCOUNT_STATUS" id="80804A07-AE4A-8406-1A10-8E6D2EE66807">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>ACCOUNT_STATUS</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPIRATION_DATE" id="C20291C6-7169-33D4-F8EB-D5D17A88876B">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>EXPIRATION_DATE</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROFILE" id="4AD2650D-4EE5-782B-F7F9-07A70BEC5BDC">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>PROFILE</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_TYPE" id="0003E7EA-D6E5-7184-C6DD-60E5BDE6FC32">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>USER_TYPE</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREATED_DATA" id="E65596EE-8C8D-C42A-ACD4-498BE17E3618">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>CREATED_DATA</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TABLESPACE" id="5292ACB9-A820-172B-FA52-D583B2EC9F8C">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>TABLESPACE</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D012B9DF-D20A-EAF4-3C85-DE53E747B86F" referredColumn="C3724A32-AB83-957A-D6D1-5A9A54B609B1"/>
+</associations>
+</Column>
+<Column name="ID_DB" id="0E3DD340-49AB-6C6A-CE3E-26BDA3EA4B97">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>ID_DB</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="559EEDBD-7CD7-E551-C67C-FE962CDDDC53" referredColumn="C46D3DDF-AC23-0244-EF14-CCE0DB1FB528"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F60938A6-D3A9-3947-A408-168051BE21F7" name="USERS_PK">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>USERS_PK</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:11 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4A924D9-80DD-CDC4-B04C-7D900799524B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93108348-D1A8-A8CE-7384-2A7DC07E4E02" schemaObject="F9B8BFA2-11A1-83BB-A818-91D5CC544522" name="USERS_PK">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>USERS_PK</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:09 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4A924D9-80DD-CDC4-B04C-7D900799524B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4DE0430C-619B-1F8B-6B6E-7F14F2374386" name="ID_DB_FK">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E3DD340-49AB-6C6A-CE3E-26BDA3EA4B97"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB85C17D-07E4-F503-8E46-2988763E1EB4" name="TABLESPACE_FK">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5292ACB9-A820-172B-FA52-D583B2EC9F8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

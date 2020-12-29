@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="CA4FA8B6-433E-4034-A4FE-7463A3C18C36" mainViewID="DA9F3632-5738-0881-16EF-C7482CC350DE">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:29:00 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

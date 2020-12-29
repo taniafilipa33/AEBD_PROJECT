@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="model" id="177A8DB7-3A40-B727-970C-C184E9436709" version="3.5">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:29:00 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>177A8DB7-3A40-B727-970C-C184E9436709</designId>
+</OSDM_Design>

@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D5CC65A1-66CE-ED74-7941-D66E945D96FE" schemaObject="F9B8BFA2-11A1-83BB-A818-91D5CC544522" name="SESSIONS">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>SESSIONS</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:29:56 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_SESSION" id="03873E98-73A2-A19D-3370-0CB1C38ADEAD">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>SESSIONS</sourceObjSchema>
+<sourceObjName>ID_SESSION</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAX_SESSIONS" id="1C917FDC-4125-B32E-C944-CC855FEA5B9E">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>SESSIONS</sourceObjSchema>
+<sourceObjName>MAX_SESSIONS</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CURRENT_SESSIONS" id="427A7192-A518-B923-6009-DF89DD4B2AD8">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>SESSIONS</sourceObjSchema>
+<sourceObjName>CURRENT_SESSIONS</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS" id="24FC0C62-0DE9-F1D2-AAA3-6E57A6AABBDC">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>SESSIONS</sourceObjSchema>
+<sourceObjName>STATUS</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIMESTAMP" id="4F70130D-F2D5-3267-10BB-FCD3C13AB0C4">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>SESSIONS</sourceObjSchema>
+<sourceObjName>TIMESTAMP</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USER" id="D278FF47-3BE6-4576-30D9-0A9DFB34DBC7">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>SESSIONS</sourceObjSchema>
+<sourceObjName>ID_USER</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3CFC8144-72B0-B6F7-C243-CD5DAB2F6758" referredColumn="E4A924D9-80DD-CDC4-B04C-7D900799524B"/>
+</associations>
+</Column>
+<Column name="ID_DB" id="C4648ED0-165A-1C44-F2A8-7370168AFF45">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>SESSIONS</sourceObjSchema>
+<sourceObjName>ID_DB</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9825D24B-5C8C-76FA-484E-56A81B663FBD" referredColumn="C46D3DDF-AC23-0244-EF14-CCE0DB1FB528"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1D18CFD6-61E5-AAF9-4B02-830DA79F7E26" name="SESSIONS_PK">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>SESSIONS_PK</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:11 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="03873E98-73A2-A19D-3370-0CB1C38ADEAD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1867DEFD-F007-EC34-E00B-1C03658D6863" schemaObject="F9B8BFA2-11A1-83BB-A818-91D5CC544522" name="SESSIONS_PK">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>SESSIONS_PK</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:09 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="03873E98-73A2-A19D-3370-0CB1C38ADEAD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="64008BD1-4E52-2EAC-E340-D0C94119DC22" name="ID_DB_SESSIONS_FK">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4648ED0-165A-1C44-F2A8-7370168AFF45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9D2F309-DEBD-A707-58BC-01D95255C519" name="USER_FK">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D278FF47-3BE6-4576-30D9-0A9DFB34DBC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

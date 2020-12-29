@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DATABASE" directorySegmentName="seg_0" id="A1F38410-2081-E884-5784-6C54B50DD804">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:29:41 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B1E8D2BA-3D82-6A38-DFAE-E250D09A0EB4</segment>
+<tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="UPTIME" id="260B2F64-53A2-502A-4B6A-A45767E43E59">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:06 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME_DB" id="5A9BC2B1-B6BD-4317-6529-0015B878467F">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:06 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OPERATING_SYSTEM" id="7916EEC1-630E-A8EB-B8FA-6D05A74B643F">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:06 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_DB" id="C46D3DDF-AC23-0244-EF14-CCE0DB1FB528">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:06 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NUM_CPU" id="F5880A03-C4D4-14F8-7099-3E888EA7B6E0">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:06 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="DATABASE_PK" id="4F766096-211F-E592-F37B-58C30DFCB5F0">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:08 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
+<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="DATABASE_PK" id="2B9BFF8C-ED4C-B210-05B8-ED9AA2051819">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:11 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
+<existingIndex>4F766096-211F-E592-F37B-58C30DFCB5F0</existingIndex>
+<indexSegment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

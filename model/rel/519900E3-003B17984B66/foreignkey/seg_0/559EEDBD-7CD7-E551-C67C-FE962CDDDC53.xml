@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="559EEDBD-7CD7-E551-C67C-FE962CDDDC53" containerWithKeyObject="99A7613E-2EED-A794-4E95-B8C263CC35D4" localFKIndex="4DE0430C-619B-1F8B-6B6E-7F14F2374386" name="ID_DB_FK">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>ID_DB_FK</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<referredTableLongName>TP.DATABASE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A1F38410-2081-E884-5784-6C54B50DD804</referredTableID>
+<keyObject>2B9BFF8C-ED4C-B210-05B8-ED9AA2051819</keyObject>
+<referredKeyID>2B9BFF8C-ED4C-B210-05B8-ED9AA2051819</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID_DB</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

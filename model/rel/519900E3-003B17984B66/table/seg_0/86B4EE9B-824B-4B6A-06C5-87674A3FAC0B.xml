@@ -1,0 +1,177 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="86B4EE9B-824B-4B6A-06C5-87674A3FAC0B" schemaObject="F9B8BFA2-11A1-83BB-A818-91D5CC544522" name="TABLESPACES">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>TABLESPACES</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:01 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TABLESPACE" id="C3724A32-AB83-957A-D6D1-5A9A54B609B1">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TABLESPACES</sourceObjSchema>
+<sourceObjName>ID_TABLESPACE</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="2D15DD71-62C4-F845-D4E1-9DB67094A07F">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TABLESPACES</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 BYTE</dataTypeSize>
+<ownDataTypeParameters>45 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ALLOCATED_SPACE" id="A2075258-3F41-EA29-EC33-E432AAB99D79">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TABLESPACES</sourceObjSchema>
+<sourceObjName>ALLOCATED_SPACE</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>126</dataTypePrecision>
+<ownDataTypeParameters>,126,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FREE_SPACE" id="CD8C3E9C-B2A1-261C-1800-98D0E28A9BF9">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TABLESPACES</sourceObjSchema>
+<sourceObjName>FREE_SPACE</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>126</dataTypePrecision>
+<ownDataTypeParameters>,126,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USED_SPACE" id="D2468266-BC07-9C6C-AB8B-CCD634D007B4">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TABLESPACES</sourceObjSchema>
+<sourceObjName>USED_SPACE</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>126</dataTypePrecision>
+<ownDataTypeParameters>,126,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IS_TEMPORARY" id="B77C989B-080A-1212-711C-46B9F3DE38AA">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TABLESPACES</sourceObjSchema>
+<sourceObjName>IS_TEMPORARY</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIMESTAMP" id="AD9B0569-4F5D-1EE6-201F-0F9AF7CC2D95">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TABLESPACES</sourceObjSchema>
+<sourceObjName>TIMESTAMP</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_DB" id="286DEB8C-E977-0A92-5F14-9094BD18A531">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TABLESPACES</sourceObjSchema>
+<sourceObjName>ID_DB</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="546D2411-53E0-1472-34BF-D051D50713A3" referredColumn="C46D3DDF-AC23-0244-EF14-CCE0DB1FB528"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6843B825-CB13-715E-8D76-AD1EF78426CA" name="TABLESPACES_PK">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>TABLESPACES_PK</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:11 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3724A32-AB83-957A-D6D1-5A9A54B609B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="299536C4-B653-1E58-4B1A-5C2E2DBE3762" schemaObject="F9B8BFA2-11A1-83BB-A818-91D5CC544522" name="TABLESPACES_PK">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>TABLESPACES_PK</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:09 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3724A32-AB83-957A-D6D1-5A9A54B609B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D6F7A80F-A4B8-E4BC-8EBE-4224CB7A997A" name="ID_DB_TS_FK">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="286DEB8C-E977-0A92-5F14-9094BD18A531"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

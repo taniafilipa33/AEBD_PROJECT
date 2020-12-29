@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="TABLESPACES" directorySegmentName="seg_0" id="86B4EE9B-824B-4B6A-06C5-87674A3FAC0B">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:01 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B1E8D2BA-3D82-6A38-DFAE-E250D09A0EB4</segment>
+<tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_DB" id="286DEB8C-E977-0A92-5F14-9094BD18A531">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="2D15DD71-62C4-F845-D4E1-9DB67094A07F">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ALLOCATED_SPACE" id="A2075258-3F41-EA29-EC33-E432AAB99D79">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TIMESTAMP" id="AD9B0569-4F5D-1EE6-201F-0F9AF7CC2D95">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IS_TEMPORARY" id="B77C989B-080A-1212-711C-46B9F3DE38AA">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_TABLESPACE" id="C3724A32-AB83-957A-D6D1-5A9A54B609B1">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FREE_SPACE" id="CD8C3E9C-B2A1-261C-1800-98D0E28A9BF9">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USED_SPACE" id="D2468266-BC07-9C6C-AB8B-CCD634D007B4">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TABLESPACES_PK" id="299536C4-B653-1E58-4B1A-5C2E2DBE3762">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:09 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
+<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ID_DB_TS_FK" id="D6F7A80F-A4B8-E4BC-8EBE-4224CB7A997A">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TABLESPACES_PK" id="6843B825-CB13-715E-8D76-AD1EF78426CA">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-29 19:30:11 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
+<existingIndex>299536C4-B653-1E58-4B1A-5C2E2DBE3762</existingIndex>
+<indexSegment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>
