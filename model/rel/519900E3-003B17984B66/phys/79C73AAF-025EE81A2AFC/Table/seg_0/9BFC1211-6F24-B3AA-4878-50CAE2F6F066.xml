@@ -38,6 +38,11 @@
 <createdTime>2020-12-29 19:30:07 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
 </ColumnProxy>
+<ColumnProxy name="NUM_CLIENTS" id="957FBD4B-AB67-FCC2-BF3D-B6A67EC62900">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-30 21:44:35 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
 <ColumnProxy name="TIMESTAMP" id="A6D08E54-8FBB-CD88-86D4-5C3419953557">
 <createdBy>comta</createdBy>
 <createdTime>2020-12-29 19:30:07 UTC</createdTime>

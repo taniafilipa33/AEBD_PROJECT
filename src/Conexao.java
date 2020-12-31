@@ -7,6 +7,8 @@ public class Conexao {
     public static final String DB_CONNECTION_PLUG = "jdbc:oracle:thin:@127.0.0.1:1521/orclpdb1.localdomain";
     public static final String DB_USER = "system";
     public static final String DB_PASSWORD = "Oradoc_db1";
+    public static final String DB_USER_PDB = "TP";
+    public static final String DB_PASSWORD_PDB = "tp";
     public static final String DB_USER_GROUP = "TP";
 
 
@@ -32,8 +34,8 @@ public class Conexao {
         return getConexao(DB_CONNECTION_ROOT, DB_USER, DB_PASSWORD);
     }
 
-    public static Connection getConcexao_plug() {
-        return getConexao(DB_CONNECTION_PLUG, DB_USER, DB_PASSWORD);
+    public static Connection getConexao_plug() {
+        return getConexao(DB_CONNECTION_PLUG, DB_USER_PDB, DB_PASSWORD_PDB);
     }
 
     public static Connection getConexao_group() {

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8D9F7CFB-0829-EE84-809C-5963FC5F57B9" containerWithKeyObject="99A7613E-2EED-A794-4E95-B8C263CC35D4" localFKIndex="7AE8A691-ADD4-45E3-98D8-C514BCA6BC6E" name="TABLESPACE_TEMP_FK">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>TP</sourceObjSchema>
+<sourceObjName>TABLESPACE_TEMP_FK</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-30 21:50:32 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>4056035F-C70A-FA7B-0723-EDAA8BA92F0F</importedID>
+<referredTableLongName>TP.TABLESPACES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>86B4EE9B-824B-4B6A-06C5-87674A3FAC0B</referredTableID>
+<keyObject>6843B825-CB13-715E-8D76-AD1EF78426CA</keyObject>
+<referredKeyID>6843B825-CB13-715E-8D76-AD1EF78426CA</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID_TABLESPACE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

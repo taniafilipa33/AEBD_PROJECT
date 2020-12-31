@@ -5,4 +5,15 @@
 <ownerDesignName>model</ownerDesignName>
 <capitalNames>false</capitalNames>
 <designId>177A8DB7-3A40-B727-970C-C184E9436709</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="95E08E89-5E95-D346-60F7-D5EAE68CBA43">
+<designStoragePath>C:\Users\comta\OneDrive\Ambiente de Trabalho\4ano\TPAEBD\AEBD_PROJECT</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="A8BC3D66-2C6C-9834-1040-D6D5E21AFDF6">
+<designStoragePath>C:\Users\comta\OneDrive\Ambiente de Trabalho\4ano\TPAEBD\AEBD_PROJECT</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="41B6AE3B-F487-B09C-1D0D-38C514444550">
+<designStoragePath>C:\Users\comta\OneDrive\Ambiente de Trabalho\4ano\TPAEBD\AEBD_PROJECT</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
 </OSDM_Design>

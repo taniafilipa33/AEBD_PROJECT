@@ -134,6 +134,23 @@
 <colAssociation fkAssociation="0FC2C248-392D-3D5E-AF17-D759F6E246CB" referredColumn="C46D3DDF-AC23-0244-EF14-CCE0DB1FB528"/>
 </associations>
 </Column>
+<Column name="NUM_CLIENTS" id="957FBD4B-AB67-FCC2-BF3D-B6A67EC62900">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>INFORMATION</sourceObjSchema>
+<sourceObjName>NUM_CLIENTES</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-30 21:44:35 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>48F3D901-3650-AFFE-FB4A-ACA293C9F8DA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="1B7B5C15-C656-2CF1-6E86-7950B8155FC9" name="INFORMATION_PK">

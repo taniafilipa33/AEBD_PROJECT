@@ -6,7 +6,7 @@
 <schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
 <logging>YES</logging>
 <partitionedRowMovement>DISABLE</partitionedRowMovement>
-<segment>B1E8D2BA-3D82-6A38-DFAE-E250D09A0EB4</segment>
+<segment>7AE59712-D5FA-AB52-EF60-C69A55000F3E</segment>
 <tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
 <temporaryChanged>false</temporaryChanged>
 <accessDriverType>oracle_loader</accessDriverType>
@@ -23,12 +23,17 @@
 <createdTime>2020-12-29 19:30:07 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
 </ColumnProxy>
+<ColumnProxy name="TABLESPACE_TEMP" id="37ECBF9F-6F9C-894A-D7F1-DDD0B41AAB98">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-30 21:44:35 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ColumnProxy>
 <ColumnProxy name="PROFILE" id="4AD2650D-4EE5-782B-F7F9-07A70BEC5BDC">
 <createdBy>comta</createdBy>
 <createdTime>2020-12-29 19:30:07 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
 </ColumnProxy>
-<ColumnProxy name="TABLESPACE" id="5292ACB9-A820-172B-FA52-D583B2EC9F8C">
+<ColumnProxy name="TABLESPACE_PERM" id="5292ACB9-A820-172B-FA52-D583B2EC9F8C">
 <createdBy>comta</createdBy>
 <createdTime>2020-12-29 19:30:07 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
@@ -65,7 +70,7 @@
 <createdTime>2020-12-29 19:30:09 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
 <schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
-<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<segment>BFD8724D-A751-F500-417E-440B4EF211F0</segment>
 <tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
 </IndexProxy>
 </indexProxies>
@@ -73,6 +78,11 @@
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="ID_DB_FK" id="4DE0430C-619B-1F8B-6B6E-7F14F2374386">
 <createdBy>comta</createdBy>
 <createdTime>2020-12-29 19:30:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TABLESPACE_TEMP_FK" id="7AE8A691-ADD4-45E3-98D8-C514BCA6BC6E">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-30 21:50:32 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
 </ForeignKey>
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TABLESPACE_FK" id="BB85C17D-07E4-F503-8E46-2988763E1EB4">
@@ -86,10 +96,10 @@
 <createdBy>comta</createdBy>
 <createdTime>2020-12-29 19:30:11 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
-<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<segment>BFD8724D-A751-F500-417E-440B4EF211F0</segment>
 <tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
 <existingIndex>93108348-D1A8-A8CE-7384-2A7DC07E4E02</existingIndex>
-<indexSegment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</indexSegment>
+<indexSegment>BFD8724D-A751-F500-417E-440B4EF211F0</indexSegment>
 <indexSort>SORTED</indexSort>
 <usingIndex>BY INDEX NAME</usingIndex>
 </PrimaryKey>

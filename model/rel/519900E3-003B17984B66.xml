@@ -3,7 +3,7 @@
 <createdBy>comta</createdBy>
 <createdTime>2020-12-29 19:29:06 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
+<shouldBeOpen>true</shouldBeOpen>
 <selectedRDBMSSite>79C73AAF-E1A7-E669-7DF0-025EE81A2AFC</selectedRDBMSSite>
 <importConnectionStamps>
 <importConnectionStamp class="oracle.dbtools.crest.imports.DBConnectionStamp">

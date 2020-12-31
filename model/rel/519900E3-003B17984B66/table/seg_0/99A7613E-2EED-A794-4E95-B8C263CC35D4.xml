@@ -115,7 +115,7 @@
 <ownDataTypeParameters>7,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="TABLESPACE" id="5292ACB9-A820-172B-FA52-D583B2EC9F8C">
+<Column name="TABLESPACE_PERM" id="5292ACB9-A820-172B-FA52-D583B2EC9F8C">
 <sourceConnName>TrabalhoPratico</sourceConnName>
 <sourceObjSchema>USERS</sourceObjSchema>
 <sourceObjName>TABLESPACE</sourceObjName>
@@ -151,6 +151,26 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="559EEDBD-7CD7-E551-C67C-FE962CDDDC53" referredColumn="C46D3DDF-AC23-0244-EF14-CCE0DB1FB528"/>
+</associations>
+</Column>
+<Column name="TABLESPACE_TEMP" id="37ECBF9F-6F9C-894A-D7F1-DDD0B41AAB98">
+<sourceConnName>TrabalhoPratico</sourceConnName>
+<sourceObjSchema>USERS</sourceObjSchema>
+<sourceObjName>TABLESPACE_TEMP</sourceObjName>
+<createdBy>comta</createdBy>
+<createdTime>2020-12-30 21:44:35 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<importedID>2EECD8F4-068E-2E82-F02B-1DA6DED23703</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D9F7CFB-0829-EE84-809C-5963FC5F57B9" referredColumn="C3724A32-AB83-957A-D6D1-5A9A54B609B1"/>
 </associations>
 </Column>
 </columns>
@@ -200,6 +220,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="5292ACB9-A820-172B-FA52-D583B2EC9F8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7AE8A691-ADD4-45E3-98D8-C514BCA6BC6E" name="TABLESPACE_TEMP_FK">
+<createdBy>comta</createdBy>
+<createdTime>2020-12-30 21:50:32 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37ECBF9F-6F9C-894A-D7F1-DDD0B41AAB98"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

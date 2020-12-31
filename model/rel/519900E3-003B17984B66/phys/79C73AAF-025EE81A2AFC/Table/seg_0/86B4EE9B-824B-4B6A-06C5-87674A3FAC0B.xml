@@ -6,7 +6,7 @@
 <schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
 <logging>YES</logging>
 <partitionedRowMovement>DISABLE</partitionedRowMovement>
-<segment>B1E8D2BA-3D82-6A38-DFAE-E250D09A0EB4</segment>
+<segment>7AE59712-D5FA-AB52-EF60-C69A55000F3E</segment>
 <tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
 <temporaryChanged>false</temporaryChanged>
 <accessDriverType>oracle_loader</accessDriverType>
@@ -60,7 +60,7 @@
 <createdTime>2020-12-29 19:30:09 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
 <schemaObject>F9B8BFA2-11A1-83BB-A818-91D5CC544522</schemaObject>
-<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<segment>BFD8724D-A751-F500-417E-440B4EF211F0</segment>
 <tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
 </IndexProxy>
 </indexProxies>
@@ -76,10 +76,10 @@
 <createdBy>comta</createdBy>
 <createdTime>2020-12-29 19:30:11 UTC</createdTime>
 <ownerDesignName>model</ownerDesignName>
-<segment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</segment>
+<segment>BFD8724D-A751-F500-417E-440B4EF211F0</segment>
 <tableSpace>9BC878D0-5FA3-2655-85A0-720DA4D14A44</tableSpace>
 <existingIndex>299536C4-B653-1E58-4B1A-5C2E2DBE3762</existingIndex>
-<indexSegment>C2542AF1-64D2-178C-82AE-9B1A7EA16EE4</indexSegment>
+<indexSegment>BFD8724D-A751-F500-417E-440B4EF211F0</indexSegment>
 <indexSort>SORTED</indexSort>
 <usingIndex>BY INDEX NAME</usingIndex>
 </PrimaryKey>
