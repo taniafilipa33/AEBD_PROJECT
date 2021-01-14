@@ -1,0 +1,45 @@
+extends header
+block content
+    // Blog entries
+    h1 Página Inicial
+    .w3-row
+        // Blog entries 
+        .w3-col
+          each a in [1]
+            // Blog entry    
+            .w3-card-4.w3-margin.w3-white
+              .w3-container
+                h3
+                  b Adicionar grafico das sessoes
+                h5 
+                  |Autor :  
+                  b pp
+                  span.w3-opacity info qualquer
+                    
+              .w3-container
+                p
+                  | cenas
+                .w3-row
+                  .w3-col.m8.s12
+                    p
+                      button.w3-button.w3-padding-large.w3-white.w3-border
+                        a(href="/sessions/") VER &raquo;
+                  
+                  
+            // END BLOG ENTRIES
+        // Introduction menu
+        .w3-col.l4
+          // About Card
+          .w3-card.w3-margin.w3-margin-top
+            .w3-container.w3-white
+              h4
+                b Inform da BD
+              p
+                | kkkk socorro
+          hr
+         
+          // Labels / tags
+         
+        // END GRID
+    br
+    // END w3-content
