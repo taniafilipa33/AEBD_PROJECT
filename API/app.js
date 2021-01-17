@@ -9,6 +9,7 @@ const dbConfig = require("./dbconfig.js");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var tablespacesRouter = require("./routes/tablespaces");
 
 var app = express();
 
@@ -28,6 +29,7 @@ oracledb.getConnection(
       console.error(err.message);
       return;
     }
+    /*
     connection.execute("SELECT * FROM tablespaces", [], function (err, result) {
       if (err) {
         console.error(err.message);
@@ -38,7 +40,7 @@ oracledb.getConnection(
       //console.log(result.metaData);
       //console.log(result.rows);
       //doRelease(connection);
-    });
+    });*/
   }
 );
 function doRelease(connection) {
@@ -60,6 +62,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/tablespaces", tablespacesRouter);
+app.use("/loader", tablespacesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

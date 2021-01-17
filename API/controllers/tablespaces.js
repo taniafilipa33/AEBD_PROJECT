@@ -1,5 +1,6 @@
 var Tablespaces = require("../models/tablespaces");
 var oracledb = require("oracledb");
+var ff = require("await");
 
 let obj = [Tablespaces];
 
@@ -38,11 +39,11 @@ module.exports.getTables = function () {
           Tablespaces.ID_DB = element[7];
           obj[i] = Tablespaces;
           i++;
+          //console.log(obj);
         });
-        console.log(obj);
       });
     }
   );
-
+  //console.log(obj);
   return obj;
 };

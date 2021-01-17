@@ -1,0 +1,25 @@
+extends header
+block content
+
+    .loader
+    .w3-container
+      h2 Tablespaces
+      form(action="/tablespaces/" method="GET", enctype="multipart/form-data")
+      table.w3-table-all.w3-hoverable
+        thead
+          tr.w3-light-grey
+            th Tablespace Name
+            th Allocated Space
+            th Free Space
+            th Used Space
+            th Type
+            th Timestamp
+          each element in tabelas
+                tr
+                    td=element.NAME
+                    td=element.ALLOCATED_SPACE
+                    td=element.FREE_SPACE
+                    td=element.USED_SPACE
+                    td=element.IS_TEMPORARY
+                    td=element.TIMESTAMP
+

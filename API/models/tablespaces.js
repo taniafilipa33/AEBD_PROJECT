@@ -5,7 +5,7 @@ var tablespaces = {
   FREE_SPACE: Number,
   USED_SPACE: Number,
   IS_TEMPORARY: String,
-  TIMESTAMP: String,
+  TIMESTAMP: Date,
   ID_DB: Number,
 };
 
