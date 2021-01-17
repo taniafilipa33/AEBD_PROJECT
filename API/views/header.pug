@@ -5,8 +5,9 @@ meta(name='viewport' content='width=device-width, initial-scale=1')
 link(rel='stylesheet', href='/stylesheets/style.css')
 link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto')
 link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat')
+script(type='text/javascript' src='https://www.gstatic.com/charts/loader.js')
 link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-script(src="/javascripts/jquery-3.5.1.min.js")
+//script(src="/javascripts/jquery-3.5.1.min.js")
 script(src='/javascripts/scripts.js')
 style.
   .w3-sidebar a {font-family: "Roboto", sans-serif}
@@ -19,18 +20,15 @@ nav#mySidebar.w3-sidebar.w3-bar-block.w3-white.w3-collapse.w3-top(style='z-index
     h3.w3-wide
       b AEBD
   .w3-padding-64.w3-large.w3-text-grey(style='font-weight:bold')
-    a.w3-bar-item.w3-button(href='#') Tablespaces
-    a.w3-bar-item.w3-button(href='#') Users
-    a.w3-bar-item.w3-button(href='#') Datafiles
-    a.w3-bar-item.w3-button(href='#') Sessions
-  a.w3-bar-item.w3-button.w3-padding(href='#footer') Contact
-  a.w3-bar-item.w3-button.w3-padding(href='javascript:void(0)' onclick="document.getElementById('newsletter').style.display='block'") Newsletter
-  a.w3-bar-item.w3-button.w3-padding(href='#footer') Subscribe
+    a.w3-bar-item.w3-button(href='/tablespaces/') Tablespaces
+    a.w3-bar-item.w3-button(href='/users/') Users
+    a.w3-bar-item.w3-button(href='/datafiles/') Datafiles
+    a.w3-bar-item.w3-button(href='/sessions/') Sessions
 
 
 // Top menu on small screens
 header.w3-bar.w3-top.w3-hide-large.w3-black.w3-xlarge
-  .w3-bar-item.w3-padding-24.w3-wide LOGO
+  .w3-bar-item.w3-padding-24.w3-wide AEBD
   a.w3-bar-item.w3-button.w3-padding-24.w3-right(href='javascript:void(0)' onclick='w3_open()')
     i.fa.fa-bars
 // Overlay effect when opening sidebar on small screens
@@ -38,7 +36,7 @@ header.w3-bar.w3-top.w3-hide-large.w3-black.w3-xlarge
 
 // Top header
 header.w3-container.w3-xlarge
-  p.w3-left Jeans
+  p.w3-left 
   p.w3-right
     i.fa.fa-shopping-cart.w3-margin-right
     i.fa.fa-search
@@ -46,11 +44,6 @@ header.w3-container.w3-xlarge
 .w3-display-container.w3-container
   img(src='/images/ex4.jpg' alt='Jeans' style='width:100%')
   .w3-display-topleft.w3-text-white(style='padding:24px 48px')
-    h1.w3-jumbo.w3-hide-small New arrivals
-    h1.w3-hide-large.w3-hide-medium New arrivals
-    h1.w3-hide-small COLLECTION 2016
-    p
-      a.w3-button.w3-black.w3-padding-large.w3-large(href='#jeans') SHOP NOW
 
 block content
 
