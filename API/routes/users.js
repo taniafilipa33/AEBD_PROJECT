@@ -1,19 +1,17 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var tab = require("../controllers/tablespaces");
+var tab = require("../controllers/users");
 
 var obj;
 /* GET loader page. */
 router.get("/loader", function (req, res, next) {
-  obj = Tablespaces.getTables();
+  obj = tab.getUsers();
   res.render("loader", { p: "users" });
 });
 
 /* GET users listing. */
-router.get('/users', function(req, res, next) {
-  var t = tab.getTables();
-  //console.log(t);
-  res.render("users", { title: t });
+router.get("/", function (req, res, next) {
+  res.render("users", { title: obj });
 });
 
 module.exports = router;

@@ -6,7 +6,7 @@ let obj = [Users];
 //query base das tablespaces
 const tablequery = `select * from users`;
 
-module.exports.getTables = function () {
+module.exports.getUsers = function () {
   oracledb.getConnection(
     {
       user: "TP",

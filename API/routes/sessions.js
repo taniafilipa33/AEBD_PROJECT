@@ -5,15 +5,14 @@ var tab = require("../controllers/sessions");
 var obj;
 /* GET loader page. */
 router.get("/loader", function (req, res, next) {
-  obj = Tablespaces.getTables();
+  obj = tab.getSessions();
   res.render("loader", { p: "sessons" });
 });
 
 /* GET home page. */
 router.get("/sessions", function (req, res, next) {
-  var t = tab.getTables();
   //console.log(t);
-  res.render("sessions", { title: t });
+  res.render("sessions", { title: obj });
 });
 
 module.exports = router;
