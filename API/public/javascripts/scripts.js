@@ -8,7 +8,7 @@ function myAccFunc() {
 }
 
 // Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
+//document.getElementById("myBtn").click();
 
 // Open and close sidebar
 function w3_open() {
