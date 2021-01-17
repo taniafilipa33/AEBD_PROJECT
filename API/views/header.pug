@@ -18,7 +18,7 @@ nav#mySidebar.w3-sidebar.w3-bar-block.w3-white.w3-collapse.w3-top(style='z-index
   .w3-container.w3-display-container.w3-padding-16
     i.fa.fa-remove.w3-hide-large.w3-button.w3-display-topright(onclick='w3_close()')
     h3.w3-wide
-      b AEBD
+      a.w3-bar-item.w3-button(href='/') AEBD
   .w3-padding-64.w3-large.w3-text-grey(style='font-weight:bold')
     a.w3-bar-item.w3-button(href='/tablespaces/loader') Tablespaces
     a.w3-bar-item.w3-button(href='/users/') Users
@@ -35,19 +35,24 @@ header.w3-bar.w3-top.w3-hide-large.w3-black.w3-xlarge
 // Overlay effect when opening sidebar on small screens
 #myOverlay.w3-overlay.w3-hide-large(onclick='w3_close()' style='cursor:pointer' title='close side menu')
 
-// Top header
-header.w3-container.w3-xlarge
-  p.w3-left 
-  p.w3-right
-    i.fa.fa-shopping-cart.w3-margin-right
-    i.fa.fa-search
-// Image header
-.w3-display-container.w3-container
-  img(src='/images/ex4.jpg' alt='Jeans' style='width:100%')
-  .w3-display-topleft.w3-text-white(style='padding:24px 48px')
+// !PAGE CONTENT!
+.w3-main(style='margin-left:250px')
+  // Push down content on small screens
+  .w3-hide-large(style='margin-top:83px')
+
+  // Top header
+  header.w3-container.w3-xlarge
+    p.w3-left 
+    p.w3-right
+      i.fa.fa-shopping-cart.w3-margin-right
+      i.fa.fa-search
+  // Image header
+  .w3-display-container.w3-container
+    img(src='/images/ex4.jpg' alt='Jeans' style='width:100%')
+    .w3-display-topleft.w3-text-white(style='padding:24px 48px')
 
 
-block content
+  block content
 
   // footer
 .w3-black.w3-center.w3-padding-24
