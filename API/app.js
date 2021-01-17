@@ -10,6 +10,8 @@ const dbConfig = require("./dbconfig.js");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var tablespacesRouter = require("./routes/tablespaces");
+var datafileRouter = require("./routes/datafiles");
+var sessionsRouter = require("./routes/sessions");
 
 var app = express();
 
@@ -64,6 +66,12 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/tablespaces", tablespacesRouter);
 app.use("/loader", tablespacesRouter);
+app.use("/loader", datafileRouter);
+app.use("/loader", indexRouter);
+app.use("/loader", datafileRouter);
+app.use("/loader", sessionsRouter);
+app.use("/datafiles", datafileRouter);
+app.use("/sessions", sessionsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

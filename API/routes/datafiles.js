@@ -5,15 +5,14 @@ var tab = require("../controllers/datafiles");
 var obj;
 /* GET loader page. */
 router.get("/loader", function (req, res, next) {
-  obj = Tablespaces.getTables();
+  obj = tab.getData();
   res.render("loader", { p: "datafiles" });
 });
 
 /* GET home page. */
 router.get("/datafiles", function (req, res, next) {
-  var t = tab.getTables();
   //console.log(t);
-  res.render("datafiles", { title: t });
+  res.render("datafiles", { title: obj });
 });
 
 module.exports = router;
