@@ -1,45 +1,69 @@
-extends header
-block content
-    // Blog entries
-    h1 Página Inicial
-    .w3-row
-        // Blog entries 
-        .w3-col
-          each a in [1]
-            // Blog entry    
-            .w3-card-4.w3-margin.w3-white
-              .w3-container
-                h3
-                  b Adicionar grafico das sessoes
-                h5 
-                  |Autor :  
-                  b pp
-                  span.w3-opacity info qualquer
-                    
-              .w3-container
-                p
-                  | cenas
-                .w3-row
-                  .w3-col.m8.s12
-                    p
-                      button.w3-button.w3-padding-large.w3-white.w3-border
-                        a(href="/sessions/") VER &raquo;
-                  
-                  
-            // END BLOG ENTRIES
-        // Introduction menu
-        .w3-col.l4
-          // About Card
-          .w3-card.w3-margin.w3-margin-top
-            .w3-container.w3-white
-              h4
-                b Inform da BD
-              p
-                | kkkk socorro
-          hr
-         
-          // Labels / tags
-         
-        // END GRID
-    br
-    // END w3-content
+  #jeans.w3-container.w3-text-grey
+    p 8 items
+  // Product grid
+  .w3-row.w3-grayscale
+    .w3-col.l3.s6
+      .w3-container
+        img(src='/w3images/jeans1.jpg' style='width:100%')
+        p
+          | Ripped Skinny Jeans
+          br
+          b $24.99
+      .w3-container
+        img(src='/w3images/jeans2.jpg' style='width:100%')
+        p
+          | Mega Ripped Jeans
+          br
+          b $19.99
+    .w3-col.l3.s6
+      .w3-container
+        .w3-display-container
+          img(src='/w3images/jeans2.jpg' style='width:100%')
+          span.w3-tag.w3-display-topleft New
+          .w3-display-middle.w3-display-hover
+            button.w3-button.w3-black
+              | Buy now 
+              i.fa.fa-shopping-cart
+        p
+          | Mega Ripped Jeans
+          br
+          b $19.99
+      .w3-container
+        img(src='/w3images/jeans3.jpg' style='width:100%')
+        p
+          | Washed Skinny Jeans
+          br
+          b $20.50
+    .w3-col.l3.s6
+      .w3-container
+        img(src='/w3images/jeans3.jpg' style='width:100%')
+        p
+          | Washed Skinny Jeans
+          br
+          b $20.50
+      .w3-container
+        .w3-display-container
+          img(src='/w3images/jeans4.jpg' style='width:100%')
+          span.w3-tag.w3-display-topleft Sale
+          .w3-display-middle.w3-display-hover
+            button.w3-button.w3-black
+              | Buy now 
+              i.fa.fa-shopping-cart
+        p
+          | Vintage Skinny Jeans
+          br
+          b.w3-text-red $14.99
+    .w3-col.l3.s6
+      .w3-container
+        img(src='/w3images/jeans4.jpg' style='width:100%')
+        p
+          | Vintage Skinny Jeans
+          br
+          b $14.99
+      .w3-container
+        img(src='/w3images/jeans1.jpg' style='width:100%')
+        p
+          | Ripped Skinny Jeans
+          br
+          b $24.99
+  
