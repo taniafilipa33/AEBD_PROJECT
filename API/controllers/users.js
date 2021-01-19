@@ -1,10 +1,11 @@
-var Users = require("../models/users");
 var oracledb = require("oracledb");
+const fs = require("fs");
 
-let obj = [Users];
+const { outFormat } = require("oracledb");
 
-//query base das tablespaces
-const tablequery = `select * from users`;
+let result;
+//query base dos users
+const userquery = `select * from users`;
 
 module.exports.getUsers = function () {
   oracledb.getConnection(
@@ -14,36 +15,30 @@ module.exports.getUsers = function () {
       connectString:
         "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orclpdb1.localdomain)))",
     },
-    function (err, connection) {
+    (async function (err, connection) {
+      console.log(
+        "olaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      );
       if (err) {
         console.error(err.message);
         return;
       }
-      connection.execute(tablequery, [], function (err, result) {
-        if (err) {
-          console.error(err.message);
-          doRelease(connection);
-          return;
-        }
-        var i = 0;
-        result.rows.forEach((element) => {
-          Users = {};
-          Users.ID_USER = element[0];
-          Users.USERNAME = element[1];
-          Users.ACCOUNT_STATUS = element[2];
-          Users.EXPIRATON_DATE = element[3];
-          Users.PROFILE = element[4];
-          Users.USER_TYPE = element[5];
-          Users.CREATED_DATA = element[6];
-          Users.TABLESPACE = element[7];
-          Users.ID_DB = element[8];
-          obj[i] = Users;
-          i++;
-        });
-        console.log(obj);
+      result = await connection.execute(userquery, [], {
+        outFormat: oracledb.OBJECT,
       });
-    }
+      console.log(result.rows);
+      let users;
+      fs.readFile("oracle.json", (err, data) => {
+        if (err) throw err;
+        users = JSON.parse(data);
+        for (var key in users) {
+          if (key === "Users") users[key] = result.rows;
+        }
+        fs.writeFile("oracle.json", JSON.stringify(users), function (erro) {
+          if (erro) throw erro;
+          console.log("complete");
+        });
+      });
+    })()
   );
-
-  return obj;
 };

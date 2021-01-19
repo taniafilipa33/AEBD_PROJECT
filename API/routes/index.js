@@ -1,18 +1,21 @@
 var express = require("express");
 var router = express.Router();
-var tab = require("../controllers/information");
+var Information = require("../controllers/information");
+var axios = require("axios");
 
-var obj;
-/* GET loader page. */
-router.get("/loader", function (req, res, next) {
-  obj = tab.getInformation();
-  res.render("loader", { p: "information" });
-});
-
-/* GET home page. */
+/* GET tablespace page. */
 router.get("/", function (req, res, next) {
-  //console.log(t);
-  res.render("index", { title: obj });
+  Information.getInformation();
+  axios
+    .get("http://localhost:3000/Information")
+    .then(function (resp) {
+      var infor = resp.data;
+      res.render("index", { info: infor });
+      res.end();
+    })
+    .catch(function (error) {
+      console.log("Erro na obtenção da lista de informations: " + error);
+    });
 });
 
 module.exports = router;

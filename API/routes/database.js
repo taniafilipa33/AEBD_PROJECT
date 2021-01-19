@@ -1,19 +1,27 @@
 var express = require("express");
 var router = express.Router();
-var tab = require("../controllers/database");
+var Database = require("../controllers/database");
+var axios = require("axios");
 
 var obj;
 /* GET loader page. */
 router.get("/loader", function (req, res, next) {
-    obj = Tablespaces.getTables();
-    res.render("loader", { p: "database" });
-  });
+  Database.getDb();
+  res.render("loader", { p: "database" });
+});
 
-/* GET home page. */
-router.get("/database", function (req, res, next) {
-  var t = tab.getTables();
-  //console.log(t);
-  res.render("database", { title: t });
+/* GET database page. */
+router.get("/", function (req, res, next) {
+  axios
+    .get("http://localhost:3000/Database")
+    .then(function (resp) {
+      var db = resp.data;
+      res.render("database", { tabelas: db });
+      res.end();
+    })
+    .catch(function (error) {
+      console.log("Erro na obtenção da lista de database: " + error);
+    });
 });
 
 module.exports = router;

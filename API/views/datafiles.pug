@@ -3,23 +3,24 @@ block content
 
     .loader
     .w3-container
-      h2 Tablespaces
+      h2 Sessions
       form(action="/datafiles/" method="GET", enctype="multipart/form-data")
       table.w3-table-all.w3-hoverable
         thead
           tr.w3-light-grey
-            th Tablespace Name
-            th Allocated Space
-            th Free Space
+            th Datafile Id
+            th File Name
+            th Status
+            th Datafile Size
             th Used Space
-            th Type
             th Timestamp
+            th Tablespace Id
           each element in tabelas
                 tr
-                    td=element.NAME
-                    td=element.ALLOCATED_SPACE
-                    td=element.FREE_SPACE
+                    td=element.ID_DATAFILE
+                    td=element.FILE_NAME
+                    td=element.STATUS
+                    td=element.DT_SIZE
                     td=element.USED_SPACE
-                    td=element.IS_TEMPORARY
                     td=element.TIMESTAMP
-
+                    td=element.ID_TABLESPACE

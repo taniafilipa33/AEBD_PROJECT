@@ -1,11 +1,9 @@
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
-const fs = require("fs");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const oracledb = require("oracledb");
-const dbConfig = require("./dbconfig.js");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -31,18 +29,6 @@ oracledb.getConnection(
       console.error(err.message);
       return;
     }
-    /*
-    connection.execute("SELECT * FROM tablespaces", [], function (err, result) {
-      if (err) {
-        console.error(err.message);
-        doRelease(connection);
-        return;
-      }
-      //console.log(json.stringify(objs));
-      //console.log(result.metaData);
-      //console.log(result.rows);
-      //doRelease(connection);
-    });*/
   }
 );
 function doRelease(connection) {
@@ -67,9 +53,8 @@ app.use("/users", usersRouter);
 app.use("/tablespaces", tablespacesRouter);
 app.use("/loader", tablespacesRouter);
 app.use("/loader", datafileRouter);
-app.use("/loader", indexRouter);
-app.use("/loader", datafileRouter);
 app.use("/loader", sessionsRouter);
+app.use("/loader", usersRouter);
 app.use("/datafiles", datafileRouter);
 app.use("/sessions", sessionsRouter);
 

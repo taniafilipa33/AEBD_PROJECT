@@ -1,17 +1,23 @@
 extends header
 block content
-
+  
+  .loader
+  form(action="/index/" method="GET", enctype="multipart/form-data")
   #jeans.w3-container.w3-text-grey
     p 8 items
   .w3-row.w3-grayscale
     .w3-col.l3.s6
-      .w3-container
-        #piechart
-      .w3-container
-        p
-          | Mega Ripped Jeans
-          br
-          b $19.99
+      .chart
+        ul.key
+          li
+            strong.percent.red 4%
+            span.choice Used Storage
+          li
+            strong.percent.gray 4%
+            span.choice Free Storage
+          li
+            strong.percent.purple 6%
+            span.choice Temporary Storage          
     .w3-col.l3.s6
       .w3-container
         .w3-display-container

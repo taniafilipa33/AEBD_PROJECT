@@ -1,12 +1,13 @@
-var Datafiles = require("../models/datafiles");
 var oracledb = require("oracledb");
+const fs = require("fs");
 
-let obj = [Datafiles];
+const { outFormat } = require("oracledb");
 
+let result;
 //query base dos datafiles
 const datafquery = `select * from datafiles`;
 
-module.exports.getData = function () {
+module.exports.getDataF = function () {
   oracledb.getConnection(
     {
       user: "TP",
@@ -14,34 +15,27 @@ module.exports.getData = function () {
       connectString:
         "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orclpdb1.localdomain)))",
     },
-    function (err, connection) {
+    (async function (err, connection) {
       if (err) {
         console.error(err.message);
         return;
       }
-      connection.execute(datafquery, [], function (err, result) {
-        if (err) {
-          console.error(err.message);
-          doRelease(connection);
-          return;
-        }
-        var i = 0;
-        result.rows.forEach((element) => {
-          Datafiles = {};
-          Datafiles.ID_DATAFILE = element[0];
-          Datafiles.FILE_NAME = element[1];
-          Datafiles.STATUS = element[2];
-          Datafiles.DT_SIZE = element[3];
-          Datafiles.USED_SPACE = element[4];
-          Datafiles.TIMESTAMP = element[5];
-          Datafiles.ID_TABLESPACE = element[6];
-          obj[i] = Datafiles;
-          i++;
-        });
-        console.log(obj);
+      result = await connection.execute(datafquery, [], {
+        outFormat: oracledb.OBJECT,
       });
-    }
-  );
 
-  return obj;
+      let datafiles;
+      fs.readFile("oracle.json", (err, data) => {
+        if (err) throw err;
+        datafiles = JSON.parse(data);
+        for (var key in datafiles) {
+          if (key === "Datafiles") datafiles[key] = result.rows;
+        }
+        fs.writeFile("oracle.json", JSON.stringify(datafiles), function (erro) {
+          if (erro) throw erro;
+          console.log("complete");
+        });
+      });
+    })()
+  );
 };

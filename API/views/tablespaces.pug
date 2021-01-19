@@ -8,6 +8,7 @@ block content
       table.w3-table-all.w3-hoverable
         thead
           tr.w3-light-grey
+            th Tablespace ID
             th Tablespace Name
             th Allocated Space
             th Free Space
@@ -16,6 +17,7 @@ block content
             th Timestamp
           each element in tabelas
                 tr
+                    td=element.ID_TABLESPACE
                     td=element.NAME
                     td=element.ALLOCATED_SPACE
                     td=element.FREE_SPACE

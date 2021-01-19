@@ -3,23 +3,22 @@ block content
 
     .loader
     .w3-container
-      h2 Tablespaces
+      h2 Sessions
       form(action="/sessions/" method="GET", enctype="multipart/form-data")
       table.w3-table-all.w3-hoverable
         thead
           tr.w3-light-grey
-            th Tablespace Name
-            th Allocated Space
-            th Free Space
-            th Used Space
-            th Type
+            th Session Id
+            th Maximum Sessions
+            th Current Sessions
+            th Status
             th Timestamp
+            th User Id
           each element in tabelas
                 tr
-                    td=element.NAME
-                    td=element.ALLOCATED_SPACE
-                    td=element.FREE_SPACE
-                    td=element.USED_SPACE
-                    td=element.IS_TEMPORARY
+                    td=element.ID_SESSION
+                    td=element.MAX_SESSIONS
+                    td=element.CURRENT_SESSIONS
+                    td=element.STATUS
                     td=element.TIMESTAMP
-
+                    td=element.ID_USER
