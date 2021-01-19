@@ -5,7 +5,7 @@ var axios = require("axios");
 
 /* GET tablespace page. */
 router.get("/", function (req, res, next) {
-  Information.getInformation();
+  Information.getInfo();
   axios
     .get("http://localhost:3000/Information")
     .then(function (resp) {

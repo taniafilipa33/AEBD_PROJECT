@@ -1,8 +1,6 @@
+var Datafiles = require("../models/datafiles");
 var oracledb = require("oracledb");
-const fs = require("fs");
-
-const { outFormat } = require("oracledb");
-
+var fs = require("fs");
 let result;
 //query base dos datafiles
 const datafquery = `select * from datafiles`;
@@ -15,27 +13,44 @@ module.exports.getDataF = function () {
       connectString:
         "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orclpdb1.localdomain)))",
     },
-    (async function (err, connection) {
+    function (err, connection) {
       if (err) {
         console.error(err.message);
         return;
       }
-      result = await connection.execute(datafquery, [], {
-        outFormat: oracledb.OBJECT,
-      });
-
-      let datafiles;
-      fs.readFile("oracle.json", (err, data) => {
-        if (err) throw err;
-        datafiles = JSON.parse(data);
-        for (var key in datafiles) {
-          if (key === "Datafiles") datafiles[key] = result.rows;
-        }
-        fs.writeFile("oracle.json", JSON.stringify(datafiles), function (erro) {
-          if (erro) throw erro;
-          console.log("complete");
+      connection
+        .execute(datafquery, [], {
+          outFormat: oracledb.OBJECT,
+        })
+        .then((dados) => {
+          let datafs;
+          fs.readFile("oracle.json", (err, data) => {
+            if (err) throw err;
+            datafs = JSON.parse(data);
+            for (var key in datafs) {
+              if (key === "Datafiles") datafs[key] = dados.rows;
+            }
+            fs.writeFile(
+              "oracle.json",
+              JSON.stringify(datafs),
+              function (erro) {
+                if (erro) throw erro;
+                console.log("complete");
+              }
+            );
+          });
+        })
+        .catch((err) => {
+          console.log(err), doRelease(connection);
         });
-      });
-    })()
+    }
   );
 };
+
+function doRelease(connection) {
+  connection.release(function (err) {
+    if (err) {
+      console.error(err.message);
+    }
+  });
+}

@@ -10,7 +10,7 @@ var usersRouter = require("./routes/users");
 var tablespacesRouter = require("./routes/tablespaces");
 var datafileRouter = require("./routes/datafiles");
 var sessionsRouter = require("./routes/sessions");
-
+var databaseRouter = require("./routes/database");
 var app = express();
 
 oracledb.initOracleClient({
@@ -31,13 +31,7 @@ oracledb.getConnection(
     }
   }
 );
-function doRelease(connection) {
-  connection.release(function (err) {
-    if (err) {
-      console.error(err.message);
-    }
-  });
-}
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
@@ -53,6 +47,8 @@ app.use("/users", usersRouter);
 app.use("/tablespaces", tablespacesRouter);
 app.use("/loader", tablespacesRouter);
 app.use("/loader", datafileRouter);
+app.use("/loader", databaseRouter);
+app.use("/database", databaseRouter);
 app.use("/loader", sessionsRouter);
 app.use("/loader", usersRouter);
 app.use("/datafiles", datafileRouter);

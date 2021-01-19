@@ -2,8 +2,8 @@ var Tablespaces = require("../models/tablespaces");
 var oracledb = require("oracledb");
 var fs = require("fs");
 let result;
-//query base dos datafiles
-const datafquery = `select * from tablespaces`;
+//query base dos tablespaces
+const tablesquery = `select * from tablespaces`;
 
 module.exports.getTables = function () {
   oracledb.getConnection(
@@ -19,7 +19,7 @@ module.exports.getTables = function () {
         return;
       }
       connection
-        .execute(datafquery, [], {
+        .execute(tablesquery, [], {
           outFormat: oracledb.OBJECT,
         })
         .then((dados) => {

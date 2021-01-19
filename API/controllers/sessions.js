@@ -1,11 +1,9 @@
+var Sessions = require("../models/sessions");
 var oracledb = require("oracledb");
-const fs = require("fs");
-
-const { outFormat } = require("oracledb");
-
+var fs = require("fs");
 let result;
 //query base das sessions
-const sessionquery = `select * from sessions`;
+const sessionsquery = `select * from sessions`;
 
 module.exports.getSessions = function () {
   oracledb.getConnection(
@@ -15,27 +13,44 @@ module.exports.getSessions = function () {
       connectString:
         "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orclpdb1.localdomain)))",
     },
-    (async function (err, connection) {
+    function (err, connection) {
       if (err) {
         console.error(err.message);
         return;
       }
-      result = await connection.execute(sessionquery, [], {
-        outFormat: oracledb.OBJECT,
-      });
-
-      let sessions;
-      fs.readFile("oracle.json", (err, data) => {
-        if (err) throw err;
-        sessions = JSON.parse(data);
-        for (var key in sessions) {
-          if (key === "Sessions") sessions[key] = result.rows;
-        }
-        fs.writeFile("oracle.json", JSON.stringify(sessions), function (erro) {
-          if (erro) throw erro;
-          console.log("complete");
+      connection
+        .execute(sessionsquery, [], {
+          outFormat: oracledb.OBJECT,
+        })
+        .then((dados) => {
+          let sessions;
+          fs.readFile("oracle.json", (err, data) => {
+            if (err) throw err;
+            sessions = JSON.parse(data);
+            for (var key in sessions) {
+              if (key === "Sessions") sessions[key] = dados.rows;
+            }
+            fs.writeFile(
+              "oracle.json",
+              JSON.stringify(sessions),
+              function (erro) {
+                if (erro) throw erro;
+                console.log("complete");
+              }
+            );
+          });
+        })
+        .catch((err) => {
+          console.log(err), doRelease(connection);
         });
-      });
-    })()
+    }
   );
 };
+
+function doRelease(connection) {
+  connection.release(function (err) {
+    if (err) {
+      console.error(err.message);
+    }
+  });
+}

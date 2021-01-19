@@ -15,7 +15,8 @@ block content
             th Profile
             th User Type
             th Created Data
-            th Tablespace Id
+            th Default Tablespace
+            th Temporary Tablespace
           each element in tabelas
                 tr
                     td=element.ID_USER
@@ -25,4 +26,5 @@ block content
                     td=element.PROFILE
                     td=element.USER_TYPE
                     td=element.CREATED_DATA
-                    td=element.TABLESPACE
+                    td=element.TABLESPACE_PERM
+                    TD=element.TABLESPACE_TEMP
