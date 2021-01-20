@@ -5,6 +5,32 @@ let result;
 //query base dos datafiles
 const datafquery = `select * from information`;
 
+module.exports.trataSessoesAtivas = function (sessoes) {
+  //var data = JSON.parse(sessoes);
+  var obj = [];
+  sessoes.sort(function (a, b) {
+    return a.TIMESTAMP > b.TIMESTAMP;
+  });
+  sessoes.forEach((element) => {
+    if (element["STATUS"] === "ACTIVE") obj.push(element["CURRENT_SESSIONS"]);
+  });
+  //console.log(obj);
+  return obj;
+};
+
+module.exports.trataSessoesInativas = function (sessoes) {
+  //var data = JSON.parse(sessoes);
+  var obj = [];
+  sessoes.sort(function (a, b) {
+    return a.TIMESTAMP > b.TIMESTAMP;
+  });
+  sessoes.forEach((element) => {
+    if (element["STATUS"] === "INACTIVE") obj.push(element["CURRENT_SESSIONS"]);
+  });
+  //console.log(obj);
+  return obj;
+};
+
 module.exports.getInfo = function () {
   oracledb.getConnection(
     {

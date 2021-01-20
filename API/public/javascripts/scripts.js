@@ -57,23 +57,87 @@ function showPage() {
   document.getElementById("myDiv").style.display = "block";
 }
 
+var ati;
+var ina;
+
+let caller = (ativo, inativo) => {
+  ati = ativo;
+  ina = inativo;
+};
 /*
- * Play with this code and it'll update in the panel opposite.
- *
- * Why not try some of the options above?
- */
-Morris.Line({
-  element: "line-example",
-  data: [
-    { y: "2006", a: 100, b: 90 },
-    { y: "2007", a: 75, b: 65 },
-    { y: "2008", a: 50, b: 40 },
-    { y: "2009", a: 75, b: 65 },
-    { y: "2010", a: 50, b: 40 },
-    { y: "2011", a: 75, b: 65 },
-    { y: "2012", a: 100, b: 90 },
-  ],
-  xkey: "y",
-  ykeys: ["a", "b"],
-  labels: ["Series A", "Series B"],
-});
+window.onload = function (multi) {
+  alert("cal");
+  console.log("oiiii");
+  ati = multi[1];
+  ina = multi[2];
+};
+*/
+/// line grapg
+window.onload = function () {
+  console.log(ina);
+  var sess = [];
+  sess.push("{ x: " + new Date(2017, 0, 3) + ", y:" + ati[0] + "}");
+  var i = 1;
+  ati.forEach((element) => {
+    sess.push(",{ x:" + new Date(2017, 0, 3) + ", y:" + element + "}");
+  });
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    theme: "light2",
+    title: {
+      text: "Sessions",
+    },
+    axisX: {
+      valueFormatString: "Timestamp",
+      crosshair: {
+        enabled: true,
+        snapToDataPoint: true,
+      },
+    },
+    axisY: {
+      title: "Number of Sessions",
+      includeZero: true,
+      crosshair: {
+        enabled: true,
+      },
+    },
+    toolTip: {
+      shared: true,
+    },
+    legend: {
+      cursor: "pointer",
+      verticalAlign: "bottom",
+      horizontalAlign: "left",
+      dockInsidePlotArea: true,
+      itemclick: toogleDataSeries,
+    },
+    data: [
+      {
+        type: "line",
+        showInLegend: true,
+        name: "Session Number",
+        markerType: "square",
+        xValueFormatString: "Timestamp",
+        color: "#F08080",
+        dataPoints: [{ x: new Date(2017, 0, 3), y: 650 }],
+      },
+      {
+        type: "line",
+        showInLegend: true,
+        name: "Unique Visit",
+        lineDashType: "dash",
+        dataPoints: sess,
+      },
+    ],
+  });
+  chart.render();
+
+  function toogleDataSeries(e) {
+    if (typeof e.dataSeries.visible === "undefined" || e.dataSeries.visible) {
+      e.dataSeries.visible = false;
+    } else {
+      e.dataSeries.visible = true;
+    }
+    chart.render();
+  }
+};

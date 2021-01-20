@@ -1,63 +1,28 @@
 extends header
 block content
   
-  .loader
-  form(action="/index/" method="GET", enctype="multipart/form-data")
-  #jeans.w3-container.w3-text-grey
-    p 8 items
-  .w3-row.w3-grayscale
-    .w3-col.l3.s6
-      .chart
-        ul.key
-          li
-            strong.percent.red 4%
-            span.choice Used Storage
-          li
-            strong.percent.gray 4%
-            span.choice Free Storage
-          li
-            strong.percent.purple 6%
-            span.choice Temporary Storage          
-    .w3-col.l3.s6
-      .w3-container
-        .w3-display-container
-          .w3-display-middle.w3-display-hover
-            button.w3-button.w3-black
-              | Buy now 
-              i.fa.fa-shopping-cart
-        p
-          | Mega Ripped Jeans
-          br
-          b $19.99
-      .w3-container
-        p
-          | Washed Skinny Jeans
-          br
-          b $20.50
-    .w3-col.l3.s6
-      .w3-container
-        p
-          | Washed Skinny Jeans
-          br
-          b $20.50
-      .w3-container
-        .w3-display-container
-          .w3-display-middle.w3-display-hover
-            button.w3-button.w3-black
-              | Buy now 
-              i.fa.fa-shopping-cart
-        p
-          | Vintage Skinny Jeans
-          br
-          b.w3-text-red $14.99
-    .w3-col.l3.s6
-      .w3-container
-        p
-          | Vintage Skinny Jeans
-          br
-          b $14.99
-      .w3-container
-        p
-          | Ripped Skinny Jeans
-          br
-          b $24.99
+  //.loader
+  script(src="https://canvasjs.com/assets/script/canvasjs.min.js" type="text/javascript")
+  form(action="/index/" method="GET", enctype="multipart/form-data")    
+    
+    #jeans.w3-container.w3-text-grey
+      //#cal(onload="cal(#{multi});") 
+      .w3-row 
+        .w3-col.l7
+          style(onload=`caller(${ativos},${inativos});` )  
+          #chartContainer(style="height: 370px; width: 100%" )
+        .w3-col.l3
+          .chart
+            ul.key
+              li
+                strong.percent.red=ativos
+                span.choice Used Storage
+              li
+                strong.percent.gray 4%
+                span.choice Free Storage
+              li
+                strong.percent.purple 6%
+                span.choice Temporary Storage 
+
+  
+    

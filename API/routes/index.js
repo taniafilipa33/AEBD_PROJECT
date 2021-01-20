@@ -9,9 +9,23 @@ router.get("/", function (req, res, next) {
   axios
     .get("http://localhost:3000/Information")
     .then(function (resp) {
-      var infor = resp.data;
-      res.render("index", { info: infor });
-      res.end();
+      axios
+        .get("http://localhost:3000/Sessions")
+        .then(function (ddd) {
+          var sessoes = ddd.data;
+          var ativas = Information.trataSessoesAtivas(sessoes);
+          var inativas = Information.trataSessoesInativas(sessoes);
+          var infor = resp.data;
+          res.render("index", {
+            info: JSON.stringify(infor),
+            ativos: JSON.stringify(ativas),
+            inativos: JSON.stringify(inativas),
+          });
+          res.end();
+        })
+        .catch(function (gggg) {
+          console.log("Erro na obtenção das sessões: " + gggg);
+        });
     })
     .catch(function (error) {
       console.log("Erro na obtenção da lista de informations: " + error);
