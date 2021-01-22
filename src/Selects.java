@@ -11,7 +11,7 @@ public class Selects {
     int idInformation;
     int idSessions;
     int idDatafiles;
-    ArrayList<Integer> idUsersT;
+    ArrayList<Long> idUsersT;
 
     public Selects(){
         idUsersT= new ArrayList<> ();
@@ -51,7 +51,7 @@ public class Selects {
             Statement st6 = Conexao.getConexao_plug ().createStatement();
             rs = st6.executeQuery(idUsers);
             while (rs.next()) {
-               idUsersT.add (rs.getInt (1));
+               idUsersT.add (rs.getLong (1));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace ();
