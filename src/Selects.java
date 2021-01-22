@@ -53,6 +53,8 @@ public class Selects {
             while (rs.next()) {
                idUsersT.add (rs.getLong (1));
             }
+            //for(Long a : idUsersT)
+                //System.out.println(a);
         } catch (SQLException throwables) {
             throwables.printStackTrace ();
         }
@@ -74,10 +76,10 @@ public class Selects {
             Statement st = Conexao.getConexao_root ().createStatement();
             rs = st.executeQuery(getUtiInfo);
             while (rs.next()) {
-                if(idUsersT.contains (rs.getInt(2))){
-                    //System.out.println ("update!!! -> "+ rs.getInt (2));
+                if(idUsersT.contains (rs.getLong(2))){
+                    //System.out.println ("update!!! -> "+ rs.getLong (2));
                     insertsTP.add ("UPDATE  USERS SET " +
-                            " ID_USER ="+rs.getInt (2) +
+                            " ID_USER ="+rs.getLong (2) +
                             ",USERNAME ='"+rs.getString (1)+"'" +
                             ",ACCOUNT_STATUS ='"+rs.getString (3)+"'" +
                             ", EXPIRATION_DATE=TO_DATE('"+rs.getDate (9)+"','YYYY-MM-DD')," +
@@ -86,13 +88,13 @@ public class Selects {
                             "CREATED_DATA=TO_DATE('" + rs.getDate (4) + "','YYYY-MM-DD')," +
                             " TABLESPACE_PERM="+getTablespace_id (rs.getString (8))+"," +
                             " ID_DB="+id_db+"," +
-                            "TABLESPACE_TEMP="+getTablespace_id (rs.getString (7))+" WHERE ID_USER="+rs.getInt (2));
+                            "TABLESPACE_TEMP="+getTablespace_id (rs.getString (7))+" WHERE ID_USER="+rs.getLong (2));
 
                 }
                 else {
-                    //System.out.println ("insert!!! -> "+ rs.getInt (2));
+                    //System.out.println ("insert!!! -> "+ rs.getLong (2));
                     insertsTP.add ("INSERT INTO USERS (ID_USER,USERNAME,ACCOUNT_STATUS, EXPIRATION_DATE, PROFILE, USER_TYPE, CREATED_DATA, TABLESPACE_PERM, ID_DB,TABLESPACE_TEMP) VALUES ("
-                            + rs.getInt (2) + ",'"
+                            + rs.getLong (2) + ",'"
                             + rs.getString (1) + "','"
                             + rs.getString (3) + "', TO_DATE('"
                             + rs.getDate (9) + "','YYYY-MM-DD'),'"
@@ -106,7 +108,7 @@ public class Selects {
             }
             Statement st2 = Conexao.getConexao_plug ().createStatement();
             for(String a : insertsTP) {
-                System.out.println (a);
+                //System.out.println (a);
                 st2.executeUpdate (a);
             }
 
@@ -219,11 +221,11 @@ public class Selects {
         String getInfoSession = "select a.SID isSessao, b.value MaxSessions, (select count(*) from v$session a, v$process b where type= 'USER' and a.Creator_ADDR = b.ADDR) NumSessoesAtuais  ,a.User# idUser, a.status STATUS from v$session a , v$parameter b WHERE b.name = 'sessions'";
         ArrayList<String> insertsIS = new ArrayList<> ();
 
-        System.out.println(getInfoSession);
+        //System.out.println(getInfoSession);
         try {
             Statement st = Conexao.getConexao_root().createStatement();
             rs = st.executeQuery(getInfoSession);
-            System.out.println("ola1111");
+            //System.out.println("ola1111");
             while (rs.next()) {
                 String times = getTimeStamp ();
                 insertsIS.add("INSERT INTO SESSIONS (ID_SESSION, MAX_SESSIONS, CURRENT_SESSIONS, STATUS, TIMESTAMP, ID_USER, ID_DB) VALUES("

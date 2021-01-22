@@ -8,7 +8,7 @@ public class Main {
         //Conexao c = new Conexao ();
         Selects s = new Selects ();
         //s.selectDatabase ();
-        
+
         s.getInfo ();
         s.selectTablespaces ();
         s.getDatafiles ();
