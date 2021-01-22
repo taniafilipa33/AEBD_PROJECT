@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="users" directorySegmentName="seg_0" id="D58E06E0-49E0-DA06-5839-B51D22903119">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<schemaObject>556A7B7C-17E1-C9BD-ADD1-AC91A3927743</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>6E926142-CC05-093D-3138-42D91666BF2A</segment>
+<tableSpace>8BF527F2-2C06-8C27-75B3-849BC3F51B8B</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="user_type" id="09461114-B348-010E-BDDB-BF47F2FF67C5">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="profile" id="202F805B-B8D2-FAAC-3F96-0BF57EAABA72">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="tablespace" id="2102A715-8C99-BA36-3738-6C9F33757668">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="created_data" id="260E32CE-08B0-B553-81C7-76E4027CBFD0">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="username" id="458FD356-B27C-EA10-1809-200886C0FF87">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_user" id="74A49D79-C867-A9C9-2FFE-46DFE1EAC5AF">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="account_status" id="E95ACD87-C768-03B5-47D3-B7B8F3056339">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="expiration_date" id="EDE80F14-FCFE-2D29-64F3-F4EA42844725">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_db" id="F9C51030-2248-9396-2956-E9A75B8C3C75">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="users_pk" id="A4E80B6A-C2F3-DF69-BA8C-26560D1DC6C9">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<schemaObject>556A7B7C-17E1-C9BD-ADD1-AC91A3927743</schemaObject>
+<segment>6E926142-CC05-093D-3138-42D91666BF2A</segment>
+<tableSpace>8BF527F2-2C06-8C27-75B3-849BC3F51B8B</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="id_db_fk" id="40CE6826-8003-5DEA-DC27-ADE4EB068400">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="tablespace_fk" id="B6A3C6EC-C439-1CBD-60E4-383E0173A06C">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="users_pk" id="6C1243C4-C4C4-87E0-7B52-B4456B86CDEF">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<logging></logging>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

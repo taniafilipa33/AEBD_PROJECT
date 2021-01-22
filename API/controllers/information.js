@@ -11,8 +11,18 @@ module.exports.trataSessoesAtivas = function (sessoes) {
   sessoes.sort(function (a, b) {
     return a.TIMESTAMP > b.TIMESTAMP;
   });
+  var time = "";
+  var i = 0;
   sessoes.forEach((element) => {
-    if (element["STATUS"] === "ACTIVE") obj.push(element["CURRENT_SESSIONS"]);
+    if (element["TIMESTAMP"] == time) {
+      obj.push(i);
+      i = 0;
+    } else {
+      if (element["STATUS"] === "ACTIVE" && element["ID_USER"] != 0) {
+        time = element["TIMESTAMP"];
+        i++;
+      }
+    }
   });
   //console.log(obj);
   return obj;
@@ -24,8 +34,18 @@ module.exports.trataSessoesInativas = function (sessoes) {
   sessoes.sort(function (a, b) {
     return a.TIMESTAMP > b.TIMESTAMP;
   });
+  var time = "";
+  var i = 0;
   sessoes.forEach((element) => {
-    if (element["STATUS"] === "INACTIVE") obj.push(element["CURRENT_SESSIONS"]);
+    if (element["TIMESTAMP"] == time) {
+      obj.push(i);
+      i = 0;
+    } else {
+      if (element["STATUS"] === "INACTIVE") {
+        time = element["TIMESTAMP"];
+        i++;
+      }
+    }
   });
   //console.log(obj);
   return obj;

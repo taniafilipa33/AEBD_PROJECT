@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="MODELO_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_45 BYTE" id="08FB2032-549A-8020-0D0C-03BF839B7454">
+         <createdBy>comta</createdBy>
+         <createdTime>2021-01-22 12:13:04 UTC</createdTime>
+         <ownerDesignName>Untitled_1</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>45 BYTE</dataTypeSize>
+         <fileName>MODELO_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="241387EC-2046-2A14-C449-7CA5D62B587F">
+         <createdBy>comta</createdBy>
+         <createdTime>2021-01-22 12:13:04 UTC</createdTime>
+         <ownerDesignName>Untitled_1</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>MODELO_Domains</fileName>
+         <logicalDatatype>LOGDT007</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20 BYTE" id="2A102AE3-575D-6DDB-48D0-8A2F6403B044">
+         <createdBy>comta</createdBy>
+         <createdTime>2021-01-22 12:13:04 UTC</createdTime>
+         <ownerDesignName>Untitled_1</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>20 BYTE</dataTypeSize>
+         <fileName>MODELO_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_*_0_0" id="81B77FC2-FB91-E0ED-34D9-F7757FAB7DAE">
+         <createdBy>comta</createdBy>
+         <createdTime>2021-01-22 12:13:04 UTC</createdTime>
+         <ownerDesignName>Untitled_1</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>*</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>MODELO_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Timestamp_6_0_0" id="BB6BED57-4896-5D6C-EF3F-F5D31ADE58E0">
+         <createdBy>comta</createdBy>
+         <createdTime>2021-01-22 12:13:04 UTC</createdTime>
+         <ownerDesignName>Untitled_1</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>6</dataTypePrecision>
+         <fileName>MODELO_Domains</fileName>
+         <logicalDatatype>LOGDT015</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_30_0_0" id="C959412B-2A5C-3523-2F4E-102DFBBC8487">
+         <createdBy>comta</createdBy>
+         <createdTime>2021-01-22 12:13:04 UTC</createdTime>
+         <ownerDesignName>Untitled_1</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>30</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>MODELO_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_100 BYTE" id="E2239273-D8AD-C6BD-5531-9506AE179C0A">
+         <createdBy>comta</createdBy>
+         <createdTime>2021-01-22 12:13:04 UTC</createdTime>
+         <ownerDesignName>Untitled_1</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>100 BYTE</dataTypeSize>
+         <fileName>MODELO_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="FLOAT_126_0_0" id="E3AF864C-98D8-BA6A-696B-C2DA0F696D29">
+         <createdBy>comta</createdBy>
+         <createdTime>2021-01-22 12:13:04 UTC</createdTime>
+         <ownerDesignName>Untitled_1</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>126</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>MODELO_Domains</fileName>
+         <logicalDatatype>LOGDT021</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

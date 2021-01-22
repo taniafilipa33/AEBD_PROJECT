@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ok" id="5E3A8B56-521B-F521-6512-E4140952265A" version="3.5">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 11:11:26 UTC</createdTime>
+<ownerDesignName>ok</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5E3A8B56-521B-F521-6512-E4140952265A</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="C0C6FE1E-696F-B373-6051-4FD5455F168C">
+<designStoragePath>C:\MODELO</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

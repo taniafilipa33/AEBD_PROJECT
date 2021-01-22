@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D58E06E0-49E0-DA06-5839-B51D22903119" schemaObject="556A7B7C-17E1-C9BD-ADD1-AC91A3927743" name="users">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>56585660-170F-1A69-258C-7E749EAC7C68</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_user" id="74A49D79-C867-A9C9-2FFE-46DFE1EAC5AF">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>C9E62FE0-CED2-DB84-FF8F-070A60B5F387</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>81B77FC2-FB91-E0ED-34D9-F7757FAB7DAE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="username" id="458FD356-B27C-EA10-1809-200886C0FF87">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>4CF73110-6B59-0B48-9F18-576EEBD0F47E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>08FB2032-549A-8020-0D0C-03BF839B7454</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="account_status" id="E95ACD87-C768-03B5-47D3-B7B8F3056339">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>66192698-4C9C-229B-5CE0-AF981F4390D8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2A102AE3-575D-6DDB-48D0-8A2F6403B044</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="expiration_date" id="EDE80F14-FCFE-2D29-64F3-F4EA42844725">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>60271857-59DA-8401-E924-1B06ED7015B1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>241387EC-2046-2A14-C449-7CA5D62B587F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="profile" id="202F805B-B8D2-FAAC-3F96-0BF57EAABA72">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>5CD90A80-05FF-2703-EDBA-E0BE555BB06C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2A102AE3-575D-6DDB-48D0-8A2F6403B044</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_type" id="09461114-B348-010E-BDDB-BF47F2FF67C5">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>2D672DF3-7BDF-D2E5-01AE-3D5F24020A0D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2A102AE3-575D-6DDB-48D0-8A2F6403B044</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="created_data" id="260E32CE-08B0-B553-81C7-76E4027CBFD0">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>7B37A558-C06D-101E-1C69-1DA6E46D955F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>241387EC-2046-2A14-C449-7CA5D62B587F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tablespace" id="2102A715-8C99-BA36-3738-6C9F33757668">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>872D5CF2-D85A-49D4-2078-6A2011184F0F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>81B77FC2-FB91-E0ED-34D9-F7757FAB7DAE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2229DB1F-720A-79D7-1F8A-78BE018CFF4B" referredColumn="527263B3-06E4-BE44-67FA-0EB6CA20EA6D"/>
+</associations>
+</Column>
+<Column name="id_db" id="F9C51030-2248-9396-2956-E9A75B8C3C75">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>8FBFD737-676A-C037-8D26-80FA36A9E710</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C959412B-2A5C-3523-2F4E-102DFBBC8487</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A01AE26E-045C-5864-BC31-37A6D106BC84" referredColumn="2EEF1C98-E576-6125-CF91-3AF624DA8E04"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6C1243C4-C4C4-87E0-7B52-B4456B86CDEF" name="users_pk">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>C638DE4B-F97D-6AA0-1953-627B78B372DA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74A49D79-C867-A9C9-2FFE-46DFE1EAC5AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A4E80B6A-C2F3-DF69-BA8C-26560D1DC6C9" schemaObject="556A7B7C-17E1-C9BD-ADD1-AC91A3927743" name="users_pk">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>89522E49-6738-7012-40C6-144D63BFCD18</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74A49D79-C867-A9C9-2FFE-46DFE1EAC5AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40CE6826-8003-5DEA-DC27-ADE4EB068400" name="id_db_fk">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9C51030-2248-9396-2956-E9A75B8C3C75"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B6A3C6EC-C439-1CBD-60E4-383E0173A06C" name="tablespace_fk">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2102A715-8C99-BA36-3738-6C9F33757668"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -2,10 +2,12 @@ var express = require("express");
 var router = express.Router();
 var Information = require("../controllers/information");
 var axios = require("axios");
+var Session = require("../controllers/sessions");
 
 /* GET tablespace page. */
 router.get("/", function (req, res, next) {
   Information.getInfo();
+  Session.getSessions();
   axios
     .get("http://localhost:3000/Information")
     .then(function (resp) {

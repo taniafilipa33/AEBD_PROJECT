@@ -9,11 +9,18 @@ public class Selects {
     long id_db;
     int indiceTablespaces;
     int idInformation;
+    int idSessions;
+    int idDatafiles;
+    ArrayList<Integer> idUsersT;
 
     public Selects(){
+        idUsersT= new ArrayList<> ();
         String getInfoDB = "SELECT a.DBID FROM V$DATABASE a ";
         String getTableSPIndex = "select count(*)-1 from TABLESPACES";
         String idInfo = "select count(*) from information";
+        String idData = "select count(*) from datafiles";
+        String idSess = "select count(*) from Sessions";
+        String idUsers = "select ID_USER from users";
         ResultSet rs;
         try {
             Statement st = Conexao.getConexao_root ().createStatement();
@@ -30,6 +37,21 @@ public class Selects {
             rs= st3.executeQuery (idInfo);
             while (rs.next()) {
                 idInformation=rs.getInt (1)+1;
+            }
+            Statement st4 = Conexao.getConexao_plug ().createStatement ();
+            rs= st4.executeQuery (idData);
+            while (rs.next()) {
+                idDatafiles=rs.getInt (1)+1;
+            }
+            Statement st5 = Conexao.getConexao_plug ().createStatement ();
+            rs= st5.executeQuery (idSess);
+            while (rs.next()) {
+                idSessions=rs.getInt (1)+1;
+            }
+            Statement st6 = Conexao.getConexao_plug ().createStatement();
+            rs = st6.executeQuery(idUsers);
+            while (rs.next()) {
+               idUsersT.add (rs.getInt (1));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace ();
@@ -52,21 +74,39 @@ public class Selects {
             Statement st = Conexao.getConexao_root ().createStatement();
             rs = st.executeQuery(getUtiInfo);
             while (rs.next()) {
-                insertsTP.add("INSERT INTO USERS (ID_USER,USERNAME,ACCOUNT_STATUS, EXPIRATION_DATE, PROFILE, USER_TYPE, CREATED_DATA, TABLESPACE_TEMP, TABLESPACE_PERM, ID_DB) VALUES ("
-                        +rs.getInt(2)+",'"
-                        +rs.getString(1)+"','"
-                        +rs.getString(3)+"', TO_DATE('"
-                        +rs.getDate (9)+"','YYYY-MM-DD'),'"
-                        +rs.getString(5)+"','"
-                        +rs.getString(6)+"',TO_DATE('"
-                        +rs.getDate (4)+"','YYYY-MM-DD'),"
-                        +getTablespace_id (rs.getString (8))+","
-                        +getTablespace_id (rs.getString (7))+","
-                        +id_db+")");
-                System.out.println(rs.getDate(9));
+                if(idUsersT.contains (rs.getInt(2))){
+                    //System.out.println ("update!!! -> "+ rs.getInt (2));
+                    insertsTP.add ("UPDATE  USERS SET " +
+                            " ID_USER ="+rs.getInt (2) +
+                            ",USERNAME ='"+rs.getString (1)+"'" +
+                            ",ACCOUNT_STATUS ='"+rs.getString (3)+"'" +
+                            ", EXPIRATION_DATE=TO_DATE('"+rs.getDate (9)+"','YYYY-MM-DD')," +
+                            " PROFILE='"+rs.getString (5)+"'," +
+                            " USER_TYPE='"+rs.getString (6)+"', " +
+                            "CREATED_DATA=TO_DATE('" + rs.getDate (4) + "','YYYY-MM-DD')," +
+                            " TABLESPACE_PERM="+getTablespace_id (rs.getString (8))+"," +
+                            " ID_DB="+id_db+"," +
+                            "TABLESPACE_TEMP="+getTablespace_id (rs.getString (7))+" WHERE ID_USER="+rs.getInt (2));
+
+                }
+                else {
+                    //System.out.println ("insert!!! -> "+ rs.getInt (2));
+                    insertsTP.add ("INSERT INTO USERS (ID_USER,USERNAME,ACCOUNT_STATUS, EXPIRATION_DATE, PROFILE, USER_TYPE, CREATED_DATA, TABLESPACE_PERM, ID_DB,TABLESPACE_TEMP) VALUES ("
+                            + rs.getInt (2) + ",'"
+                            + rs.getString (1) + "','"
+                            + rs.getString (3) + "', TO_DATE('"
+                            + rs.getDate (9) + "','YYYY-MM-DD'),'"
+                            + rs.getString (5) + "','"
+                            + rs.getString (6) + "',TO_DATE('"
+                            + rs.getDate (4) + "','YYYY-MM-DD'),"
+                            + getTablespace_id (rs.getString (8)) + ","
+                            + id_db + ","
+                            + getTablespace_id (rs.getString (7)) + ")");
+                }
             }
             Statement st2 = Conexao.getConexao_plug ().createStatement();
             for(String a : insertsTP) {
+                System.out.println (a);
                 st2.executeUpdate (a);
             }
 
@@ -121,7 +161,7 @@ public class Selects {
             for(String a : insertsTT) {
                 st2.executeUpdate (a);
             }
-        } catch (SQLException throwables) {
+        } catch (SQLException  throwables ) {
             throwables.printStackTrace ();
         }
         return null;
@@ -140,11 +180,12 @@ public class Selects {
             rs = st.executeQuery(datafiles);
             while (rs.next()) {
                 inserts.add( "INSERT INTO DATAFILES (ID_DATAFILE,FILE_NAME,STATUS,DT_SIZE,USED_SPACE,TIMESTAMP,ID_TABLESPACE) VALUES ("
-                        +rs.getInt(2)+",'"+rs.getString(1)+"','"+
+                        +idDatafiles+",'"+rs.getString(1)+"','"+
                         rs.getString(5) +"',"
                         +rs.getFloat (4)+","+rs.getFloat(6)+
                         ",to_timestamp('"+times+"','YYYY-MM-DD HH24:MI:SS.FF'),"+
                         getTablespace_id(rs.getString(3))+")");
+                idDatafiles++;
             }
             Statement st2 = Conexao.getConexao_plug ().createStatement();
             for(String a : inserts) {
@@ -154,11 +195,12 @@ public class Selects {
             rs=st.executeQuery(datafilTemp);
             while (rs.next()) {
                 insertsT.add( "INSERT INTO DATAFILES (ID_DATAFILE,FILE_NAME,STATUS,DT_SIZE,USED_SPACE,TIMESTAMP,ID_TABLESPACE) VALUES (" +
-                        rs.getInt(2)+",'"+rs.getString(1)+"','"+
+                        idDatafiles+",'"+rs.getString(1)+"','"+
                         rs.getString(5) +"',"
                         +rs.getFloat (4)+","+rs.getFloat(6)+
                         ",to_timestamp('"+times+"','YYYY-MM-DD HH24:MI:SS.FF'),"+
                         getTablespace_id(rs.getString(3))+")");
+                idDatafiles++;
             }
             st2 = Conexao.getConexao_plug ().createStatement();
             for(String a : insertsT) {
@@ -176,22 +218,28 @@ public class Selects {
         ResultSet rs2;
         String getInfoSession = "select a.SID isSessao, b.value MaxSessions, (select count(*) from v$session a, v$process b where type= 'USER' and a.Creator_ADDR = b.ADDR) NumSessoesAtuais  ,a.User# idUser, a.status STATUS from v$session a , v$parameter b WHERE b.name = 'sessions'";
         ArrayList<String> insertsIS = new ArrayList<> ();
+
+        System.out.println(getInfoSession);
         try {
             Statement st = Conexao.getConexao_root().createStatement();
             rs = st.executeQuery(getInfoSession);
+            System.out.println("ola1111");
             while (rs.next()) {
                 String times = getTimeStamp ();
                 insertsIS.add("INSERT INTO SESSIONS (ID_SESSION, MAX_SESSIONS, CURRENT_SESSIONS, STATUS, TIMESTAMP, ID_USER, ID_DB) VALUES("
-                        + rs.getInt(1)+","
+                        + idSessions+","
                         + rs.getInt(2)+","
                         + rs.getInt(3)+",'"
                         + rs.getString(5)+"',"
                         + "to_timestamp('"+times+"','YYYY-MM-DD HH24:MI:SS.FF'),"
                         + rs.getInt(4)+","
                         + id_db + ")");
+                idSessions++;
             }
-            Statement st2 = Conexao.getConexao_plug().createStatement();
+
+            Statement st2 = Conexao.getConexao_plug ().createStatement();
             for(String a : insertsIS) {
+                //System.out.println (a);
                 st2.executeUpdate (a);
             }
         } catch (SQLException throwables) {
@@ -210,8 +258,8 @@ public class Selects {
                 return rs.getInt (1);
             }
         }catch (SQLException throwables) {
-        throwables.printStackTrace ();
-    }
+            throwables.printStackTrace ();
+        }
         return 0;
     }
     public ResultSet selectDatabase(){
@@ -232,11 +280,26 @@ public class Selects {
                         rs.getLong(1)+",'"+rs.getString(2)+"','"+rs.getString(3) +"',"
                         +rs.getInt(4)+",'"+rs.getString(5)+"')");
             }
+            Statement st2 = Conexao.getConexao_plug ().createStatement ();
+            String h = "SELECT * FROM TABLESPACES";
+            //System.out.println (inserts.get(y));
 
-            Statement st2 = Conexao.getConexao_plug ().createStatement();
-            for(String a : inserts) {
-                st2.executeUpdate (a);
+            for (String insert : inserts){
+                //st = Conexao.getConexao_plug ().prepareStatement (insert);
+                st2.executeUpdate (insert);
             }
+            //ResultSet a = st2.executeQuery (h);
+            //System.out.println(a);
+            /*
+            for(String a : inserts) {
+                try {
+                    st2.executeQuery (a);
+                }catch(Exception oi) {
+                    oi.printStackTrace();
+                }
+            }
+
+             */
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

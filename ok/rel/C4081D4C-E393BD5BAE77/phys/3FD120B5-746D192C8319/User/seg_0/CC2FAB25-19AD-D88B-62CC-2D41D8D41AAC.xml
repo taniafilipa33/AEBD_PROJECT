@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="TP" directorySegmentName="seg_0" id="CC2FAB25-19AD-D88B-62CC-2D41D8D41AAC">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:12:38 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<schemaObject>556A7B7C-17E1-C9BD-ADD1-AC91A3927743</schemaObject>
+<identifier>0573C30E667226CA890BA664471F434464</identifier>
+</UserOraclev10g>

@@ -74,13 +74,24 @@ window.onload = function (multi) {
 */
 /// line grapg
 window.onload = function () {
-  console.log(ina);
+  //console.log(ina);
   var sess = [];
-  sess.push("{ x: " + new Date(2017, 0, 3) + ", y:" + ati[0] + "}");
+  var ianess = [];
+  console.log(ati);
+  sess.push({ x: 0, y: ati[0] });
+  ianess.push({ x: 0, y: ina[0] });
   var i = 1;
   ati.forEach((element) => {
-    sess.push(",{ x:" + new Date(2017, 0, 3) + ", y:" + element + "}");
+    //console.log();
+    sess.push({ x: i, y: element });
+    i++;
   });
+  i = 1;
+  ina.forEach((element) => {
+    ianess.push({ x: i, y: element });
+    i++;
+  });
+  console.log(sess);
   var chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
     theme: "light2",
@@ -119,14 +130,14 @@ window.onload = function () {
         markerType: "square",
         xValueFormatString: "Timestamp",
         color: "#F08080",
-        dataPoints: [{ x: new Date(2017, 0, 3), y: 650 }],
+        dataPoints: sess,
       },
       {
         type: "line",
         showInLegend: true,
         name: "Unique Visit",
         lineDashType: "dash",
-        dataPoints: sess,
+        dataPoints: ianess,
       },
     ],
   });

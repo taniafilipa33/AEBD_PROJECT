@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="TP" directorySegmentName="seg_0" id="556A7B7C-17E1-C9BD-ADD1-AC91A3927743">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>ok</ownerDesignName>
+<importedID>9FC8CE1C-6CEC-1445-6AEB-96E6887EE2CE</importedID>
+</SchemaObject>

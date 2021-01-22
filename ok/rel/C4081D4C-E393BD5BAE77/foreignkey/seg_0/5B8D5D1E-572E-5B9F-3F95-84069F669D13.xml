@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5B8D5D1E-572E-5B9F-3F95-84069F669D13" containerWithKeyObject="A4E87483-D6F5-C0E7-0C0C-900C4C671B6C" localFKIndex="822DA88B-99ED-F9AE-2D28-2E80C12264E0" name="id_dbi_fk">
+<sourceDDLFile>MODELO.ddl</sourceDDLFile>
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:13:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<importedID>5E3A3BAB-EA70-2256-42B1-0078EFF5CD5A</importedID>
+<referredTableLongName>TP.database</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FD9104CC-5D96-DB28-A6B8-4BD4229D0934</referredTableID>
+<keyObject>F35BD727-9887-D400-61A6-D4262B4CB6B0</keyObject>
+<referredKeyID>F35BD727-9887-D400-61A6-D4262B4CB6B0</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id_db</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

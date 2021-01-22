@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="MODELO" id="C4081D4C-E717-C7D3-B6E6-E393BD5BAE77" mainViewID="FD92FA88-256D-8686-6FB5-37582DCF6807">
+<createdBy>comta</createdBy>
+<createdTime>2021-01-22 12:12:38 UTC</createdTime>
+<ownerDesignName>ok</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>MODELO.ddl</fileName>
+<pathName>C:\Users\comta\OneDrive\Ambiente de Trabalho\4ano\TPAEBD\AEBD_PROJECT</pathName>
+<dbType>11</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>
