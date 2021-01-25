@@ -7,6 +7,7 @@
 var app = require("../app");
 var debug = require("debug")("api:server");
 var http = require("http");
+var fs = require("fs");
 
 /**
  * Get port from environment and store in Express.
@@ -34,6 +35,7 @@ server.on("listening", onListening);
  */
 
 function normalizePort(val) {
+  //restartFile();
   var port = parseInt(val, 10);
 
   if (isNaN(port)) {
@@ -49,6 +51,18 @@ function normalizePort(val) {
   return false;
 }
 
+/** restart file oracle */
+
+function restartFile() {
+  fs.writeFile(
+    "oracle.json",
+    '{"Tablespaces": [],"Datafiles": [],"Users": [],"Database": [],"Sessions": [],"Information": []}',
+    function (erro) {
+      if (erro) throw erro;
+      console.log("complete");
+    }
+  );
+}
 /**
  * Event listener for HTTP server "error" event.
  */
@@ -80,5 +94,6 @@ function onError(error) {
  */
 
 function onListening() {
+  restartFile();
   console.log("listening on port " + port + "....");
 }

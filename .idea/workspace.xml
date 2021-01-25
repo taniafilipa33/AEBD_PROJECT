@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7cee44ae-357f-437a-b6f9-3ea4c205bdca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/controllers/information.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/information.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/oracle.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/oracle.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/tablespaces.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODELO.ddl" beforeDir="false" afterPath="$PROJECT_DIR$/MODELO.ddl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Selects.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Selects.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -36,7 +41,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/swingbench25971/swingbench/lib/ojdbc6.jar" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/wetransfer-ee838d (1)/78" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -46,19 +51,6 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="AEBD_PROJECT" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -82,22 +74,14 @@
       <workItem from="1609429169875" duration="83000" />
       <workItem from="1611084330790" duration="2172000" />
       <workItem from="1611254347865" duration="10771000" />
-      <workItem from="1611310887612" duration="9451000" />
+      <workItem from="1611310887612" duration="13906000" />
+      <workItem from="1611414664198" duration="10000" />
+      <workItem from="1611438585334" duration="3201000" />
+      <workItem from="1611486037664" duration="203000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

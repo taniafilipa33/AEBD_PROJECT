@@ -1,6 +1,10 @@
 var Tablespaces = require("../models/information");
 var oracledb = require("oracledb");
 var fs = require("fs");
+const { Console } = require("console");
+const { Session } = require("inspector");
+const { json } = require("express");
+const { isRegExp } = require("util");
 let result;
 //query base dos datafiles
 const datafquery = `select * from information`;
@@ -14,13 +18,14 @@ module.exports.trataSessoesAtivas = function (sessoes) {
   var time = "";
   var i = 0;
   sessoes.forEach((element) => {
-    if (element["TIMESTAMP"] == time) {
+    if (element["TIMESTAMP"] != time) {
+      time = element["TIMESTAMP"];
       obj.push(i);
       i = 0;
     } else {
       if (element["STATUS"] === "ACTIVE" && element["ID_USER"] != 0) {
         time = element["TIMESTAMP"];
-        i++;
+        i = i + 1;
       }
     }
   });
@@ -31,19 +36,24 @@ module.exports.trataSessoesAtivas = function (sessoes) {
 module.exports.trataSessoesInativas = function (sessoes) {
   //var data = JSON.parse(sessoes);
   var obj = [];
-  sessoes.sort(function (a, b) {
-    return a.TIMESTAMP > b.TIMESTAMP;
+
+  sessoes.reverse();
+
+  sessoes.forEach((element) => {
+    console.log(element["TIMESTAMP"]);
   });
   var time = "";
   var i = 0;
   sessoes.forEach((element) => {
-    if (element["TIMESTAMP"] == time) {
+    if (element["TIMESTAMP"] != time) {
+      time = element["TIMESTAMP"];
       obj.push(i);
       i = 0;
     } else {
       if (element["STATUS"] === "INACTIVE") {
+        //console.log(element["TIMESTAMP"]);
         time = element["TIMESTAMP"];
-        i++;
+        i = i + 1;
       }
     }
   });

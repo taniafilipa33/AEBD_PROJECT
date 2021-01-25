@@ -11,6 +11,8 @@ var tablespacesRouter = require("./routes/tablespaces");
 var datafileRouter = require("./routes/datafiles");
 var sessionsRouter = require("./routes/sessions");
 var databaseRouter = require("./routes/database");
+var fs = require("fs");
+const { fstat } = require("fs");
 var app = express();
 
 oracledb.initOracleClient({
@@ -68,6 +70,19 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render("error");
+});
+
+/** restart file oracle */
+
+app.use(function restartFile() {
+  fs.writeFile(
+    "oracle.json",
+    '{"Tablespaces": [],"Datafiles": [],"Users": [],"Database": [],"Sessions": [],"Information": []}',
+    function (erro) {
+      if (erro) throw erro;
+      console.log("complete");
+    }
+  );
 });
 
 module.exports = app;
