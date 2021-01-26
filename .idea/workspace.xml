@@ -5,14 +5,25 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/controllers/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/controllers/datafiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/datafiles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/controllers/information.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/information.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/controllers/sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/controllers/tablespaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/tablespaces.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/controllers/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/oracle.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/oracle.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/tablespaces.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MODELO.ddl" beforeDir="false" afterPath="$PROJECT_DIR$/MODELO.ddl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/public/javascripts/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/public/javascripts/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/API/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/routes/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/routes/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/routes/datafiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/routes/datafiles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/routes/sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/routes/sessions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/routes/tablespaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/routes/tablespaces.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/views/header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/API/views/header.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/API/views/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/views/loader.pug" beforeDir="false" afterPath="$PROJECT_DIR$/API/views/loader.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Selects.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Selects.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Selects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selects.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +66,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -78,6 +100,7 @@
       <workItem from="1611414664198" duration="10000" />
       <workItem from="1611438585334" duration="3201000" />
       <workItem from="1611486037664" duration="203000" />
+      <workItem from="1611681226101" duration="6323000" />
     </task>
     <servers />
   </component>

@@ -24,16 +24,20 @@ module.exports.getUsers = function () {
         })
         .then((dados) => {
           let users;
-          fs.readFile("oracle.json", (err, data) => {
+          fs.readFileSync("oracle.json", (err, data) => {
             if (err) throw err;
             users = JSON.parse(data);
             for (var key in users) {
               if (key === "Users") users[key] = dados.rows;
             }
-            fs.writeFile("oracle.json", JSON.stringify(users), function (erro) {
-              if (erro) throw erro;
-              console.log("complete");
-            });
+            fs.writeFileSync(
+              "oracle.json",
+              JSON.stringify(users),
+              function (erro) {
+                if (erro) throw erro;
+                console.log("complete");
+              }
+            );
           });
         })
         .catch((err) => {

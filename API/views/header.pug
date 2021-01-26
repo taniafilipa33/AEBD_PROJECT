@@ -20,7 +20,7 @@ nav#mySidebar.w3-sidebar.w3-bar-block.w3-white.w3-collapse.w3-top.w3-card-4(styl
   .w3-container.w3-display-container.w3-padding-16
     i.fa.fa-remove.w3-hide-large.w3-button.w3-display-topright(onclick='w3_close()')
     h3.w3-wide
-      a.w3-bar-item.w3-button(href='/') AEBD
+      a.w3-bar-item.w3-button(href='/loader') AEBD
   .w3-padding-64.w3-large.w3-text-grey(style='font-weight:bold')
     a.w3-bar-item.w3-button(href='/tablespaces/loader') Tablespaces
     a.w3-bar-item.w3-button(href='/users/loader') Users
@@ -43,12 +43,7 @@ header.w3-bar.w3-top.w3-hide-large.w3-black.w3-xlarge
   // Push down content on small screens
   .w3-hide-large(style='margin-top:83px')
 
-  // Top header
-  header.w3-container.w3-xlarge
-    p.w3-left 
-    p.w3-right
-      i.fa.fa-shopping-cart.w3-margin-right
-      i.fa.fa-search
+
   // Image header
   .w3-display-container.w3-container
     img(src='/images/ex4.jpg' alt='Jeans' style='width:100%')
@@ -58,7 +53,7 @@ header.w3-bar.w3-top.w3-hide-large.w3-black.w3-xlarge
   block content
 
   // footer
-.w3-black.w3-center.w3-padding-24
+footer.w3-black.w3-center.w3-padding-24(style="position: relative;left: 7%;")
    | Powered by 
    a.w3-hover-opacity( title='W3.CSS' target='_blank') Grupo06
 

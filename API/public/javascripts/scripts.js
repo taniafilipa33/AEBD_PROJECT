@@ -56,16 +56,16 @@ window.onload = function () {
   //console.log(ina);
   var sess = [];
   var ianess = [];
-  console.log(ati);
-  sess.push({ x: 0, y: ati[0] });
-  ianess.push({ x: 0, y: ina[0] });
-  var i = 1;
+  // console.log(ati);
+  //sess.push({ x: 0, y: ati[0] });
+  //ianess.push({ x: 0, y: ina[0] });
+  var i = 0;
   ati.forEach((element) => {
     //console.log();
     sess.push({ x: i, y: element });
     i++;
   });
-  i = 1;
+  i = 0;
   ina.forEach((element) => {
     ianess.push({ x: i, y: element });
     i++;

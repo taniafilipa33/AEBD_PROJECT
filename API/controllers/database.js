@@ -24,16 +24,20 @@ module.exports.getDb = function () {
         })
         .then((dados) => {
           let datab;
-          fs.readFile("oracle.json", (err, data) => {
+          fs.readFileSync("oracle.json", (err, data) => {
             if (err) throw err;
             datab = JSON.parse(data);
             for (var key in datab) {
               if (key === "Database") datab[key] = dados.rows;
             }
-            fs.writeFile("oracle.json", JSON.stringify(datab), function (erro) {
-              if (erro) throw erro;
-              console.log("complete");
-            });
+            fs.writeFileSync(
+              "oracle.json",
+              JSON.stringify(datab),
+              function (erro) {
+                if (erro) throw erro;
+                console.log("complete");
+              }
+            );
           });
         })
         .catch((err) => {
@@ -42,6 +46,19 @@ module.exports.getDb = function () {
     }
   );
 };
+
+/** restart file oracle */
+
+function restartFile() {
+  fs.writeFile(
+    "oracle.json",
+    '{"Tablespaces": [],"Datafiles": [],"Users": [],"Database": [],"Sessions": [],"Information": []}',
+    function (erro) {
+      if (erro) throw erro;
+      console.log("complete");
+    }
+  );
+}
 
 function doRelease(connection) {
   connection.release(function (err) {

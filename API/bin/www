@@ -51,18 +51,6 @@ function normalizePort(val) {
   return false;
 }
 
-/** restart file oracle */
-
-function restartFile() {
-  fs.writeFile(
-    "oracle.json",
-    '{"Tablespaces": [],"Datafiles": [],"Users": [],"Database": [],"Sessions": [],"Information": []}',
-    function (erro) {
-      if (erro) throw erro;
-      console.log("complete");
-    }
-  );
-}
 /**
  * Event listener for HTTP server "error" event.
  */
@@ -87,6 +75,19 @@ function onError(error) {
     default:
       throw error;
   }
+}
+
+/** restart file oracle */
+
+function restartFile() {
+  fs.writeFileSync(
+    "oracle.json",
+    '{"Tablespaces": [],"Datafiles": [],"Users": [],"Database": [],"Sessions": [],"Information": []}',
+    function (erro) {
+      if (erro) throw erro;
+      console.log("complete");
+    }
+  );
 }
 
 /**

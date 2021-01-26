@@ -7,13 +7,14 @@ var obj;
 /* GET loader page. */
 router.get("/loader", function (req, res, next) {
   Datafiles.getDataF();
-  res.render("loader", { p: "datafiles" });
+  //console.log("ola");
+  res.render("loader", { p: "datafiles/" });
 });
 
 /* GET datafiles page. */
 router.get("/", function (req, res, next) {
   axios
-    .get("http://localhost:3000/Datafiles")
+    .get("http://localhost:3002/Datafiles")
     .then(function (resp) {
       var datafiles = resp.data;
       var resposta = Datafiles.trataDatafiles(datafiles);

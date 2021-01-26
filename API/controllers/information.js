@@ -5,6 +5,7 @@ const { Console } = require("console");
 const { Session } = require("inspector");
 const { json } = require("express");
 const { isRegExp } = require("util");
+const { restart } = require("nodemon");
 let result;
 //query base dos datafiles
 const datafquery = `select * from information`;
@@ -39,9 +40,6 @@ module.exports.trataSessoesInativas = function (sessoes) {
 
   sessoes.reverse();
 
-  sessoes.forEach((element) => {
-    console.log(element["TIMESTAMP"]);
-  });
   var time = "";
   var i = 0;
   sessoes.forEach((element) => {
@@ -79,14 +77,15 @@ module.exports.getInfo = function () {
           outFormat: oracledb.OBJECT,
         })
         .then((dados) => {
+          //restart();
           let tables;
-          fs.readFile("oracle.json", (err, data) => {
+          fs.readFileSync("oracle.json", (err, data) => {
             if (err) throw err;
             tables = JSON.parse(data);
             for (var key in tables) {
               if (key === "Information") tables[key] = dados.rows;
             }
-            fs.writeFile(
+            fs.writeFileSync(
               "oracle.json",
               JSON.stringify(tables),
               function (erro) {

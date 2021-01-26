@@ -24,13 +24,13 @@ module.exports.getDataF = function () {
         })
         .then((dados) => {
           let datafs;
-          fs.readFile("oracle.json", (err, data) => {
+          fs.readFileSync("oracle.json", { endoding: "utf8" }, (err, data) => {
             if (err) throw err;
             datafs = JSON.parse(data);
             for (var key in datafs) {
               if (key === "Datafiles") datafs[key] = dados.rows;
             }
-            fs.writeFile(
+            fs.writeFileSync(
               "oracle.json",
               JSON.stringify(datafs),
               function (erro) {
@@ -62,6 +62,19 @@ module.exports.trataDatafiles = function (tables) {
   });
   return resposta;
 };
+
+/** restart file oracle */
+
+function restartFile() {
+  fs.writeFile(
+    "oracle.json",
+    '{"Tablespaces": [],"Datafiles": [],"Users": [],"Database": [],"Sessions": [],"Information": []}',
+    function (erro) {
+      if (erro) throw erro;
+      console.log("complete");
+    }
+  );
+}
 
 function doRelease(connection) {
   connection.release(function (err) {

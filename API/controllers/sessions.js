@@ -3,7 +3,7 @@ var oracledb = require("oracledb");
 var fs = require("fs");
 let result;
 //query base das sessions
-const sessionsquery = `select * from sessions order by id_session`;
+const sessionsquery = `select * from sessions order by id_session desc`;
 
 module.exports.getSessions = function () {
   oracledb.getConnection(
@@ -24,13 +24,14 @@ module.exports.getSessions = function () {
         })
         .then((dados) => {
           let sessions;
-          fs.readFile("oracle.json", (err, data) => {
+          fs.readFileSync("oracle.json", (err, data) => {
             if (err) throw err;
+
             sessions = JSON.parse(data);
             for (var key in sessions) {
               if (key === "Sessions") sessions[key] = dados.rows;
             }
-            fs.writeFile(
+            fs.writeFileSync(
               "oracle.json",
               JSON.stringify(sessions),
               function (erro) {
@@ -69,4 +70,17 @@ function doRelease(connection) {
       console.error(err.message);
     }
   });
+}
+
+/** restart file oracle */
+
+function restartFile() {
+  fs.writeFile(
+    "oracle.json",
+    '{"Tablespaces": [],"Datafiles": [],"Users": [],"Database": [],"Sessions": [],"Information": []}',
+    function (erro) {
+      if (erro) throw erro;
+      console.log("complete");
+    }
+  );
 }

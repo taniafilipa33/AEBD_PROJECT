@@ -49,6 +49,7 @@ app.use("/users", usersRouter);
 app.use("/tablespaces", tablespacesRouter);
 app.use("/loader", tablespacesRouter);
 app.use("/loader", datafileRouter);
+app.use("/loader", indexRouter);
 app.use("/loader", databaseRouter);
 app.use("/database", databaseRouter);
 app.use("/loader", sessionsRouter);

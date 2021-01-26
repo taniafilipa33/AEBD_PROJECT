@@ -11,7 +11,8 @@ block content
         .w3-col.l9
           .w3-container
             .w3-card-4
-              style(onload=`caller(${ativos},${inativos});` )  
+              style(onload=`caller(${ativos},${inativos});` )               
+              style(onload=`pgr(${info});` )   
               #chartContainer(style="height: 370px; width: 100%" )
         .w3-col.l3
           .w3-container
@@ -31,10 +32,9 @@ block content
   .w3-margin
     #jeans.w3-container.w3-text-grey
       .w3-row
-        .w3-col.l8
+        .w3-col.l9
           .w3-container
-            .w3-card-4
-              style(onload=`pgr(${info});` )  
+            .w3-card-4.w3-center
               #piechart
         .w3-col.l3
           .w3-container
@@ -44,9 +44,10 @@ block content
                   tr.w3-white
                     th Max Size Memory
                     th Cache Size
-                    th Status
-                      //each inf in info
-                      tr
-                        td=info.MAX_SIZE_MEM
-                        td=info.CACHE_SIZE_MEM
-                        td=info.FREE_MEM
+                    th Free Memory
+                  //each inf in info
+                  tr
+                    td=mems.MAX_SIZE_MEM
+                    td=mems.CACHE_SIZE_MEM
+                    td=mems.FREE_MEM
+              img(src='./images/enchido.jpg' alt='Alps' style='width:80%')

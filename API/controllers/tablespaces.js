@@ -24,13 +24,14 @@ module.exports.getTables = function () {
         })
         .then((dados) => {
           let tables;
-          fs.readFile("oracle.json", (err, data) => {
+          fs.readFileSync("oracle.json", (err, data) => {
             if (err) throw err;
+
             tables = JSON.parse(data);
             for (var key in tables) {
               if (key === "Tablespaces") tables[key] = dados.rows;
             }
-            fs.writeFile(
+            fs.writeFileSync(
               "oracle.json",
               JSON.stringify(tables),
               function (erro) {
@@ -60,6 +61,7 @@ module.exports.trataTimestamps = function (tables) {
   tables.forEach((element) => {
     if (element["TIMESTAMP"] === times) resposta.push(element);
   });
+  console.log(resposta);
   return resposta;
 };
 
