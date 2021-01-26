@@ -103,6 +103,22 @@ module.exports.getInfo = function () {
   );
 };
 
+module.exports.trataInfo = function (tables) {
+  var resposta = [];
+  var id = -1;
+  var times = "";
+  tables.forEach((element) => {
+    if (element["ID_INFORMATION"] > id) {
+      id = element["ID_INFORMATION"];
+      times = element["TIMESTAMP"];
+    }
+  });
+  tables.forEach((element) => {
+    if (element["TIMESTAMP"] === times) resposta.push(element);
+  });
+  return resposta;
+};
+
 function doRelease(connection) {
   connection.release(function (err) {
     if (err) {

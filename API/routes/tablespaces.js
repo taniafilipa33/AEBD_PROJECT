@@ -16,7 +16,8 @@ router.get("/", function (req, res, next) {
     .get("http://localhost:3000/Tablespaces")
     .then(function (resp) {
       var tables = resp.data;
-      res.render("tablespaces", { tabelas: tables });
+      var final = Tablespaces.trataTimestamps(tables);
+      res.render("tablespaces", { tabelas: final });
       res.end();
     })
     .catch(function (error) {

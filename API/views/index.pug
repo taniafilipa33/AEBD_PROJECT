@@ -4,25 +4,49 @@ block content
   //.loader
   script(src="https://canvasjs.com/assets/script/canvasjs.min.js" type="text/javascript")
   form(action="/index/" method="GET", enctype="multipart/form-data")    
-    
+  .w3-margin
     #jeans.w3-container.w3-text-grey
       //#cal(onload="cal(#{multi});") 
       .w3-row 
-        .w3-col.l7
-          style(onload=`caller(${ativos},${inativos});` )  
-          #chartContainer(style="height: 370px; width: 100%" )
+        .w3-col.l9
+          .w3-container
+            .w3-card-4
+              style(onload=`caller(${ativos},${inativos});` )  
+              #chartContainer(style="height: 370px; width: 100%" )
         .w3-col.l3
-          .chart
-            ul.key
-              li
-                strong.percent.red=ativos
-                span.choice Used Storage
-              li
-                strong.percent.gray 4%
-                span.choice Free Storage
-              li
-                strong.percent.purple 6%
-                span.choice Temporary Storage 
-
-  
-    
+          .w3-container
+            .w3-card-4.w3-center
+              br
+              img(src='./images/base.jpg' alt='Alps' style='width:40%')
+              .w3-container.w3-center
+                each pp in base
+                  p ID Base de Dados : 
+                    b=pp.ID_DB
+                  b=pp.NAME_DB   
+                  b=pp.OPERATING_SYSTEM
+                  p CPU:
+                    b=pp.NUM_CPU 
+                  p Uptime:
+                    b=pp.UPTIME
+  .w3-margin
+    #jeans.w3-container.w3-text-grey
+      .w3-row
+        .w3-col.l8
+          .w3-container
+            .w3-card-4
+              style(onload=`pgr(${info});` )  
+              #piechart
+        .w3-col.l3
+          .w3-container
+            .w3-card-4.w3-center
+              table.w3-table-all.w3-hoverable
+                thead
+                  tr.w3-white
+                    th Max Size Memory
+                    th Cache Size
+                    th Status
+                      //each inf in info
+                      tr
+                        td=info.MAX_SIZE_MEM
+                        td=info.CACHE_SIZE_MEM
+                        td=info.FREE_MEM

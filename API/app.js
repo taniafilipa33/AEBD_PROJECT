@@ -72,17 +72,4 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-/** restart file oracle */
-
-app.use(function restartFile() {
-  fs.writeFile(
-    "oracle.json",
-    '{"Tablespaces": [],"Datafiles": [],"Users": [],"Database": [],"Sessions": [],"Information": []}',
-    function (erro) {
-      if (erro) throw erro;
-      console.log("complete");
-    }
-  );
-});
-
 module.exports = app;

@@ -94,6 +94,6 @@ function onError(error) {
  */
 
 function onListening() {
-  restartFile();
+  //restartFile();
   console.log("listening on port " + port + "....");
 }

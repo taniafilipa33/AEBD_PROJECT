@@ -16,7 +16,8 @@ router.get("/", function (req, res, next) {
     .get("http://localhost:3000/Datafiles")
     .then(function (resp) {
       var datafiles = resp.data;
-      res.render("datafiles", { tabelas: datafiles });
+      var resposta = Datafiles.trataDatafiles(datafiles);
+      res.render("datafiles", { tabelas: resposta });
       res.end();
     })
     .catch(function (error) {

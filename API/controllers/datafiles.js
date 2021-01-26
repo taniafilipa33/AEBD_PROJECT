@@ -3,7 +3,7 @@ var oracledb = require("oracledb");
 var fs = require("fs");
 let result;
 //query base dos datafiles
-const datafquery = `select * from datafiles`;
+const datafquery = `select * from datafiles order by id_datafile`;
 
 module.exports.getDataF = function () {
   oracledb.getConnection(
@@ -45,6 +45,22 @@ module.exports.getDataF = function () {
         });
     }
   );
+};
+
+module.exports.trataDatafiles = function (tables) {
+  var resposta = [];
+  var id = -1;
+  var times = "";
+  tables.forEach((element) => {
+    if (element["ID_DATAFILE"] > id) {
+      id = element["ID_DATAFILE"];
+      times = element["TIMESTAMP"];
+    }
+  });
+  tables.forEach((element) => {
+    if (element["TIMESTAMP"] === times) resposta.push(element);
+  });
+  return resposta;
 };
 
 function doRelease(connection) {

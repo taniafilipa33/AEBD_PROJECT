@@ -16,7 +16,8 @@ router.get("/", function (req, res, next) {
     .get("http://localhost:3000/Sessions")
     .then(function (resp) {
       var sessions = resp.data;
-      res.render("sessions", { tabelas: sessions });
+      var resposta = Sessions.trataSession(sessions);
+      res.render("sessions", { tabelas: resposta });
       res.end();
     })
     .catch(function (error) {

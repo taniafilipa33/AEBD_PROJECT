@@ -3,7 +3,7 @@ var oracledb = require("oracledb");
 var fs = require("fs");
 let result;
 //query base das sessions
-const sessionsquery = `select * from sessions`;
+const sessionsquery = `select * from sessions order by id_session`;
 
 module.exports.getSessions = function () {
   oracledb.getConnection(
@@ -45,6 +45,22 @@ module.exports.getSessions = function () {
         });
     }
   );
+};
+
+module.exports.trataSession = function (tables) {
+  var resposta = [];
+  var id = -1;
+  var times = "";
+  tables.forEach((element) => {
+    if (element["ID_SESSION"] > id) {
+      id = element["ID_SESSION"];
+      times = element["TIMESTAMP"];
+    }
+  });
+  tables.forEach((element) => {
+    if (element["TIMESTAMP"] === times) resposta.push(element);
+  });
+  return resposta;
 };
 
 function doRelease(connection) {

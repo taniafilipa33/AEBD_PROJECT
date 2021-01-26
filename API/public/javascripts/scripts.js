@@ -21,31 +21,6 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
-// Load google charts
-google.charts.load("current", { packages: ["corechart"] });
-google.charts.setOnLoadCallback(drawChart);
-
-// Draw the chart and set the chart values
-function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-    ["Task", "Hours per Day"],
-    ["Work", 8],
-    ["Eat", 2],
-    ["TV", 4],
-    ["Gym", 2],
-    ["Sleep", 8],
-  ]);
-
-  // Optional; add a title and set the width and height of the chart
-  var options = { title: "My Average Day", width: 550, height: 400 };
-
-  // Display the chart inside the <div> element with id="piechart"
-  var chart = new google.visualization.PieChart(
-    document.getElementById("#piechart")
-  );
-  chart.draw(data, options);
-}
-
 var myVar;
 
 function myFunction() {
@@ -64,14 +39,18 @@ let caller = (ativo, inativo) => {
   ati = ativo;
   ina = inativo;
 };
-/*
-window.onload = function (multi) {
-  alert("cal");
-  console.log("oiiii");
-  ati = multi[1];
-  ina = multi[2];
+
+var pier = [];
+
+let pgr = (value) => {
+  value.forEach((element) => {
+    pier.push(element["STORAGE_DATA"]);
+    pier.push(element["STORAGE_TEMP"]);
+    pier.push(5714 - element["STORAGE_DATA"]);
+  });
+  console.log(pier);
 };
-*/
+
 /// line grapg
 window.onload = function () {
   //console.log(ina);
@@ -99,7 +78,7 @@ window.onload = function () {
       text: "Sessions",
     },
     axisX: {
-      valueFormatString: "Timestamp",
+      valueFormatString: "",
       crosshair: {
         enabled: true,
         snapToDataPoint: true,
@@ -126,16 +105,16 @@ window.onload = function () {
       {
         type: "line",
         showInLegend: true,
-        name: "Session Number",
+        name: "Active Sessions",
         markerType: "square",
-        xValueFormatString: "Timestamp",
+        xValueFormatString: "",
         color: "#F08080",
         dataPoints: sess,
       },
       {
         type: "line",
         showInLegend: true,
-        name: "Unique Visit",
+        name: "Inactive Sessions",
         lineDashType: "dash",
         dataPoints: ianess,
       },
@@ -152,3 +131,26 @@ window.onload = function () {
     chart.render();
   }
 };
+
+// Load google charts
+google.charts.load("current", { packages: ["corechart"] });
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ["Storage", "MBytes"],
+    ["Free_Storage", pier[2]],
+    ["Temporary_Storage", pier[1]],
+    ["Data_Storage", pier[0]],
+  ]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = { title: "Storage", width: 1050, height: 400 };
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(
+    document.getElementById("piechart")
+  );
+  chart.draw(data, options);
+}

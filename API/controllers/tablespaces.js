@@ -3,7 +3,7 @@ var oracledb = require("oracledb");
 var fs = require("fs");
 let result;
 //query base dos tablespaces
-const tablesquery = `select * from tablespaces`;
+const tablesquery = `select * from tablespaces order by id_tablespace`;
 
 module.exports.getTables = function () {
   oracledb.getConnection(
@@ -45,6 +45,22 @@ module.exports.getTables = function () {
         });
     }
   );
+};
+
+module.exports.trataTimestamps = function (tables) {
+  var resposta = [];
+  var id = -1;
+  var times = "";
+  tables.forEach((element) => {
+    if (element["ID_TABLESPACE"] > id) {
+      id = element["ID_TABLESPACE"];
+      times = element["TIMESTAMP"];
+    }
+  });
+  tables.forEach((element) => {
+    if (element["TIMESTAMP"] === times) resposta.push(element);
+  });
+  return resposta;
 };
 
 function doRelease(connection) {
