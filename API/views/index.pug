@@ -1,18 +1,18 @@
 extends header
 block content
   
-  //.loader
+  .loader
   script(src="https://canvasjs.com/assets/script/canvasjs.min.js" type="text/javascript")
-  form(action="/index/" method="GET", enctype="multipart/form-data")    
+  form(action="/index/" method="GET", enctype="multipart/form-data")  
+  style(onload=`caller(${ativos},${inativos});` )               
+  style(onload=`pgr(${info});` )  
   .w3-margin
     #jeans.w3-container.w3-text-grey
       //#cal(onload="cal(#{multi});") 
       .w3-row 
         .w3-col.l9
           .w3-container
-            .w3-card-4
-              style(onload=`caller(${ativos},${inativos});` )               
-              style(onload=`pgr(${info});` )   
+            .w3-card-4   
               #chartContainer(style="height: 370px; width: 100%" )
         .w3-col.l3
           .w3-container

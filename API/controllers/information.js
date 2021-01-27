@@ -13,20 +13,23 @@ const datafquery = `select * from information`;
 module.exports.trataSessoesAtivas = function (sessoes) {
   //var data = JSON.parse(sessoes);
   var obj = [];
-  sessoes.sort(function (a, b) {
-    return a.TIMESTAMP > b.TIMESTAMP;
-  });
+
   var time = "";
   var i = 0;
+  var counter = 0;
   sessoes.forEach((element) => {
-    if (element["TIMESTAMP"] != time) {
-      time = element["TIMESTAMP"];
-      obj.push(i);
-      i = 0;
-    } else {
-      if (element["STATUS"] === "ACTIVE" && element["ID_USER"] != 0) {
+    if (counter < 20) {
+      if (element["TIMESTAMP"] != time) {
         time = element["TIMESTAMP"];
-        i = i + 1;
+        obj.push(i);
+        i = 0;
+        //console.log(time);
+        counter = counter + 1;
+      } else {
+        if (element["STATUS"] === "ACTIVE" && element["ID_USER"] != 0) {
+          time = element["TIMESTAMP"];
+          i = i + 1;
+        }
       }
     }
   });
@@ -38,20 +41,24 @@ module.exports.trataSessoesInativas = function (sessoes) {
   //var data = JSON.parse(sessoes);
   var obj = [];
 
-  sessoes.reverse();
-
+  //sessoes.reverse();
+  var counter = 0;
   var time = "";
   var i = 0;
   sessoes.forEach((element) => {
-    if (element["TIMESTAMP"] != time) {
-      time = element["TIMESTAMP"];
-      obj.push(i);
-      i = 0;
-    } else {
-      if (element["STATUS"] === "INACTIVE") {
-        //console.log(element["TIMESTAMP"]);
+    if (counter < 20) {
+      if (element["TIMESTAMP"] != time) {
         time = element["TIMESTAMP"];
-        i = i + 1;
+        obj.push(i);
+        console.log(time);
+        counter = counter + 1;
+        i = 0;
+      } else {
+        if (element["STATUS"] === "INACTIVE") {
+          //console.log(element["TIMESTAMP"]);
+          time = element["TIMESTAMP"];
+          i = i + 1;
+        }
       }
     }
   });
@@ -79,7 +86,7 @@ module.exports.getInfo = function () {
         .then((dados) => {
           //restart();
           let tables;
-          fs.readFileSync("oracle.json", (err, data) => {
+          fs.readFile("oracle.json", (err, data) => {
             if (err) throw err;
             tables = JSON.parse(data);
             for (var key in tables) {

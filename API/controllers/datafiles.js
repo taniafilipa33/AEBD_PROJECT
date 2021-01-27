@@ -24,7 +24,7 @@ module.exports.getDataF = function () {
         })
         .then((dados) => {
           let datafs;
-          fs.readFileSync("oracle.json", { endoding: "utf8" }, (err, data) => {
+          fs.readFile("oracle.json", { endoding: "utf8" }, (err, data) => {
             if (err) throw err;
             datafs = JSON.parse(data);
             for (var key in datafs) {

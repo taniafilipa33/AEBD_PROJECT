@@ -24,7 +24,7 @@ module.exports.getUsers = function () {
         })
         .then((dados) => {
           let users;
-          fs.readFileSync("oracle.json", (err, data) => {
+          fs.readFile("oracle.json", (err, data) => {
             if (err) throw err;
             users = JSON.parse(data);
             for (var key in users) {

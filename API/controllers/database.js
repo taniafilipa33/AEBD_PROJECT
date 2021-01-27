@@ -24,7 +24,7 @@ module.exports.getDb = function () {
         })
         .then((dados) => {
           let datab;
-          fs.readFileSync("oracle.json", (err, data) => {
+          fs.readFile("oracle.json", (err, data) => {
             if (err) throw err;
             datab = JSON.parse(data);
             for (var key in datab) {

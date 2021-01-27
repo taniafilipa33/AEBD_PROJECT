@@ -9,24 +9,26 @@ var fs = require("fs");
 /* GET loader page. */
 router.get("/loader", function (req, res, next) {
   //restartFile();
-  Information.getInfo();
+
   Session.getSessions();
-  Database.getDb();
+
   res.render("loader", { p: "" });
 });
 
 /* GET tablespace page. */
 router.get("/", function (req, res, next) {
   //restartFile();
-
-  axios.get("http://localhost:3002/Information").then(function (resp) {
+  Information.getInfo();
+  Database.getDb();
+  axios.get("http://localhost:3002/Sessions").then(function (ddd) {
     axios
-      .get("http://localhost:3002/Sessions")
-      .then(function (ddd) {
+      .get("http://localhost:3002/Database")
+      .then(function (maisO) {
         axios
-          .get("http://localhost:3002/Database")
-          .then(function (maisO) {
+          .get("http://localhost:3002/Information")
+          .then(function (resp) {
             //var bases = maisO.data;
+            //console.log(ddd.data);
             var sessoes = ddd.data;
             var ativas = Information.trataSessoesAtivas(sessoes);
             var inativas = Information.trataSessoesInativas(sessoes);

@@ -13,12 +13,17 @@ public class Main {
         while(true) {
             System.out.println ("vol");
             s.selectTablespaces ();
+            System.out.println("passT");
             s.selectUtilizadores ();
+            System.out.println("passU");
             s.selectSessions ();
+            System.out.println("passS");
             s.getInfo ();
+            System.out.println("passI");
             s.getDatafiles ();
+            System.out.println("passD");
             try {
-                sleep(15000);
+                sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace ();
             }

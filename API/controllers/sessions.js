@@ -24,13 +24,16 @@ module.exports.getSessions = function () {
         })
         .then((dados) => {
           let sessions;
-          fs.readFileSync("oracle.json", (err, data) => {
+          //console.log(dados);
+          fs.readFile("oracle.json", (err, data) => {
             if (err) throw err;
-
             sessions = JSON.parse(data);
+            //console.log(data);
             for (var key in sessions) {
+              //console.log("sessoes 1111");
               if (key === "Sessions") sessions[key] = dados.rows;
             }
+            console.log(sessions["Sessions"]);
             fs.writeFileSync(
               "oracle.json",
               JSON.stringify(sessions),

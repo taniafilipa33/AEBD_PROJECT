@@ -24,7 +24,7 @@ module.exports.getTables = function () {
         })
         .then((dados) => {
           let tables;
-          fs.readFileSync("oracle.json", (err, data) => {
+          fs.readFile("oracle.json", (err, data) => {
             if (err) throw err;
 
             tables = JSON.parse(data);
