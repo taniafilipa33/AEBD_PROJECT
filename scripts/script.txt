@@ -1,0 +1,14 @@
+mkdir $docker_data/oracle/u02/app/oracle/oradata/ORCL/TrabalhoPratico                
+chown oracle:oinstall $docker_data/oracle/u02/app/oracle/oradata/ORCL/TrabalhoPratico
+create pluggable database TrabalhoPratico admin user tp_admin identified by tp roles = (DBA) FILE_NAME_CONVERT=('/u02/app/oracle/oradata/ORCL/pdbseed','/u02/app/oracle/oradata/ORCL/TrabalhoPratico');
+
+create temporary tablespace TP tempfile '/u02/app/oracle/oradata/ORCL/tp_temp01.dbf' SIZE 100M;
+create tablespace tp_tab datafile '/u02/app/oracle/oradata/ORCL/job_tab.dbf' SIZE 100M; 
+
+select pdb_name, status from cdb_pdbs;
+select name, open_mode from v$pdbs;
+select name, con_id from v$active_services order by 1;
+
+select name from v$datafile where con_id=7; //id do Tp_PDB = 7
+
+

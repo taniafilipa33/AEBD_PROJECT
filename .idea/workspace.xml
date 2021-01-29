@@ -3,19 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7cee44ae-357f-437a-b6f9-3ea4c205bdca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/controllers/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/controllers/datafiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/datafiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/controllers/information.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/information.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/controllers/sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/sessions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/controllers/tablespaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/tablespaces.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/controllers/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/controllers/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/oracle.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/oracle.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/API/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/API/views/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/views/loader.pug" beforeDir="false" afterPath="$PROJECT_DIR$/API/views/loader.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/views/sessions.pug" beforeDir="false" afterPath="$PROJECT_DIR$/API/views/sessions.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/views/datafiles.pug" beforeDir="false" afterPath="$PROJECT_DIR$/API/views/datafiles.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Conexao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AEBD_PROJECT/Conexao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Conexao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conexao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/wetransfer-ee838d (1)/78" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -83,6 +75,10 @@
       <workItem from="1611486037664" duration="203000" />
       <workItem from="1611681226101" duration="6763000" />
       <workItem from="1611740907609" duration="4743000" />
+      <workItem from="1611789570339" duration="363000" />
+      <workItem from="1611832496521" duration="1798000" />
+      <workItem from="1611937222593" duration="3823000" />
+      <workItem from="1611943448825" duration="17000" />
     </task>
     <servers />
   </component>

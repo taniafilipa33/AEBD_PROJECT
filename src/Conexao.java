@@ -9,7 +9,6 @@ public class Conexao {
     public static final String DB_PASSWORD = "Oradoc_db1";
     public static final String DB_USER_PDB = "TP";
     public static final String DB_PASSWORD_PDB = "tp";
-    public static final String DB_USER_GROUP = "TP";
 
 
     public static Connection getConexao(String conn, String user, String pw) {
@@ -38,24 +37,4 @@ public class Conexao {
         return getConexao(DB_CONNECTION_PLUG, DB_USER_PDB, DB_PASSWORD_PDB);
     }
 
-    public static Connection getConexao_group() {
-        return getConexao(DB_CONNECTION_PLUG, DB_USER_GROUP, DB_PASSWORD);
-    }
-
-    public String connTest() throws SQLException {
-        String s;
-        ResultSet rs;
-
-        System.out.println("GRUPO06 PLUGABBLE CONNECTION:");
-
-        String query = "SELECT USERNAME FROM ALL_USERS WHERE USER_ID = 121";
-        Statement st = getConexao_group().createStatement();
-        rs = st.executeQuery(query);
-        rs.next();
-
-        s = rs.getString(1);
-        System.out.println(s);
-
-        return s;
-    }
 }
